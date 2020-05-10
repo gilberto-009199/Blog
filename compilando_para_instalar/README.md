@@ -19,7 +19,7 @@ Para ser mais especifico vou abortar as operações básicas de um compilador e 
 
 #### Leitura do código e sintaxe
 
-  Nessa etapa as linhas de codigo são lidas e a sintaxe da linguagem é aplicada , por exemplo abrir chaves\( { \) deve ser sequido por um fechar chaves\( } \) identificando um bloco de execução.
+  Nessa etapa as linhas de código são lidas e a sintaxe da linguagem é aplicada , por exemplo abrir chaves\(  **`{`**  \) deve ser sequido por um fechar chaves\(  **`}`** \) identificando um bloco de execução.
 
 {% tabs %}
 {% tab title="Code" %}
@@ -37,9 +37,13 @@ function Somar(val0, val1){ <-- Sintax error
 {% endtab %}
 {% endtabs %}
 
+É e nessa etapa aonde entra os analisadores Léxico, sintático, semântico e o gerador de código.
 
+   Analisador **Léxico** responsável por organizar as palavras e símbolos reservados da linguagem como `function`.
 
-#### Unir arquivos e lincar bibliotecas 
+   Analisador **Sintático** se encarrega de verificar a sequencia de símbolos  esta correta como  `+, -, *, / e etc`, exemplo:   `val0 + val1 == 22` .
 
-Conteudo
+  Por fim o analisador Semântico gera um mapa\(Uma estrutura de dados\) com a estrutura do programa e o gerador de código lé a estrutura passando da estrutura para uma linguagem de baixo nível seja ela C ou Assemble para por fim montar ou chamar um compilador que monte  o programa uma descrição mais completa se encontra nesse [link](https://sites.icmc.usp.br/delamaro/slidescompiladores/compiladoresfinal.pdf).
+
+#### 
 
