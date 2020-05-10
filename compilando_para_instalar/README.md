@@ -7,7 +7,7 @@ description: >-
 
 # Compilar
 
-### Por que não e familiar?
+### Por que não é familiar?
 
    A maioria de nos nasce em com um Windows e aprendi a baixar programas já compilados ou com instaladores que não especificam suas operações internas, mas isso é um erro? Não, a responsabilidade de mostrar ao usuário oque você como desenvolvedor esta operando na maquina do usuário  de modo que qualquer um entenda não e sua responsabilidade, mas convenhamos que isso poderia trazer uma nova visão  de usuários e também permitir que usuários possam resolver problemas do software em relação ao seu computador.
 
@@ -15,5 +15,5 @@ description: >-
 
 ### Operações internas
 
-d
+Por mais magico que um compilador possa parecer o mesmo também é um programa que assim como todos os outros foi compilado.
 
