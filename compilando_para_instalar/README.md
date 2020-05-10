@@ -45,5 +45,9 @@ function Somar(val0, val1){ <-- Sintax error
 
   Por fim o analisador Semântico gera um mapa\(Uma estrutura de dados\) com a estrutura do programa e o gerador de código lé a estrutura passando da estrutura para uma linguagem de baixo nível seja ela C ou Assemble para por fim montar ou chamar um compilador que monte  o programa uma descrição mais completa se encontra nesse [link](https://sites.icmc.usp.br/delamaro/slidescompiladores/compiladoresfinal.pdf).
 
+#### Compilando GCC 
+
+> Em desenvolvimento consulte OS.dev para mais informações
+
 #### 
 
