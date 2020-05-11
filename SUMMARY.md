@@ -5,6 +5,6 @@
 ## Linux
 
 * [Compilar](compilando_para_instalar/README.md)
-  * [Make, Make Install, Play](compilando_para_instalar/basic.md)
+  * [Install Linux Program](compilando_para_instalar/basic.md)
   * [Resolvendo Dependencias](compilando_para_instalar/resolvendo-dependencias.md)
 

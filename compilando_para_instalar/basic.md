@@ -2,7 +2,7 @@
 description: Algo comum para os usuários linux e estranho quanto entrei para esse grupo.
 ---
 
-# Make, Make Install, Play
+# Install Linux Program
 
 ### Obtendo o código da aplicação
 
@@ -120,4 +120,6 @@ bash-5.0$ exit
 ~$ cd ~/opt/bash/source/
 ~$ make uninstall
 ```
+
+
 
