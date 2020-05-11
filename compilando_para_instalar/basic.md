@@ -80,7 +80,7 @@ e ou
 ```
 {% endtab %}
 
-{% tab title="Second Tab" %}
+{% tab title="Tree" %}
 ```text
 opt  # pasta aonde organizaremos o codigo das aplicações
 └── bash  # pasta do codigo fonte e dos arquivos de build
