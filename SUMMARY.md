@@ -6,5 +6,7 @@
 
 * [Compilar](compilando_para_instalar/README.md)
   * [Install Linux Program](compilando_para_instalar/basic.md)
-  * [Resolvendo Dependencias](compilando_para_instalar/resolvendo-dependencias.md)
+  * [Programas Compilados](compilando_para_instalar/repository/README.md)
+    * [DBeaver](compilando_para_instalar/repository/dbeaver.md)
+    * [VPCS](compilando_para_instalar/repository/vpcs.md)
 
