@@ -45,5 +45,28 @@ opt  # pasta aonde organizaremos o codigo das aplicações
 {% endtab %}
 {% endtabs %}
 
+ Agora com o código fonte em mão vamos ver nossas opções, para ser claro dependendo do software a ser instalado podemos usar :
+
+```text
+~$ python setup.py install
+```
+
+e ou
+
+```text
+~$ ./configure #script de configuração
+~$ make    #programa executa o script de compilação Makefile
+~$ make install # move os arquivos compilados
+```
+
+   Mas por que temos essa diferença, na realidade para instalar um software você muitas vezes você precisará usar iniciar um programa que ira organizar e configurar os arquivos do programa desejado.
+
+   Normalmente todos os script de configuração fornecem algumas opções entre elas as mais comuns são
+
+* --prefix=&lt;{  Diretório de instalação }&gt;
+* --target=&lt;{ Arquitetura da compilação como i686-elf }&gt;
+
+No nosso caso vamos utilizar o --prefix para guardar a compilação no diretório `~/opt/node/build`.
+
 
 
