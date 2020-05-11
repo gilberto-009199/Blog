@@ -39,7 +39,7 @@ opt  # pasta aonde organizaremos o codigo das aplicações
 ```bash
 opt  # pasta aonde organizaremos o codigo das aplicações
 └── bash  # pasta do codigo fonte e dos arquivos de build
-    └── sources  # pasta com o codigo no Nodejs
+    └── source  # pasta com o codigo no Nodejs
 
 ```
 {% endtab %}
