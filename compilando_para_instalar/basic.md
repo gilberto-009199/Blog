@@ -6,34 +6,44 @@ description: Algo comum para os usuários linux e estranho quanto entrei para es
 
 ### Obtendo o código da aplicação
 
-  Vamos usar como exemplo o [Deluge](https://dev.deluge-torrent.org), um cliente torrent de código aberto feito em Python.
+  Vamos usar como exemplo o [Nodejs](https://nodejs.org), uma plataforma de execução de JavaScript do lado do servidor.
 
   Antes de proceder com a instalação vamos criar uma estrutura de diretórios aonde poderemos organizar o código fonte das nossas aplicações. Atenção isso e muito relevante principalmente se um dia desejarmos desinstalar um dos programas.
 
 {% tabs %}
 {% tab title="Bash" %}
-```text
+```bash
 ~$ mkdir ~/opt
-~$ mkdir ~/opt/deluge
+~$ mkdir ~/opt/node
 ```
 {% endtab %}
 
 {% tab title="Tree" %}
-```text
-
+```bash
 opt  # pasta aonde organizaremos o codigo das aplicações
-└── deluge # pasta do codigo fonte e dos arquivos de build
-  
-  
+└── node # pasta do codigo fonte e dos arquivos de build
 ```
 {% endtab %}
 {% endtabs %}
 
-  Agora que já temos aonde guardar o código fonte, vamos baixar pelo git os fontes:
+  Agora que já temos aonde guardar o código fonte, vamos baixar pelo [Git](https://git-scm.com) os fontes:
 
-```text
+{% tabs %}
+{% tab title="Bash" %}
+```bash
+~$ git clone https://github.com/nodejs/node.git sources
+```
+{% endtab %}
+
+{% tab title="Tree" %}
+```bash
+opt  # pasta aonde organizaremos o codigo das aplicações
+└── node  # pasta do codigo fonte e dos arquivos de build
+    └── sources  # pasta com o codigo no Nodejs
 
 ```
+{% endtab %}
+{% endtabs %}
 
 
 
