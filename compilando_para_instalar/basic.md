@@ -47,7 +47,7 @@ opt  # pasta aonde organizaremos o codigo das aplicações
 
  Agora com o código fonte em mão vamos ver nossas opções, para ser claro dependendo do software a ser instalado podemos usar :
 
-```text
+```bash
 ~$ python setup.py install
 ```
 
