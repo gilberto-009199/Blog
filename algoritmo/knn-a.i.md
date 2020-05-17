@@ -10,7 +10,7 @@ description: >-
 
 #### Montar o cenário
 
-  Estamos em um ilustre restaurante dentro do Aeroporto Internacional John F. Kennedy na cidade de New York, 
+  Estamos em um ilustre restaurante dentro do Aeroporto Internacional John F. Kennedy na cidade de New York, nosso cliente possui 
 
 
 

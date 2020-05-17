@@ -4,7 +4,7 @@
 
 ## Linux
 
-* [Compilar](compilando_para_instalar/README.md)
+* [Compilar Programas](compilando_para_instalar/README.md)
   * [Install Linux Program](compilando_para_instalar/basic.md)
   * [Programas Compilados](compilando_para_instalar/repository/README.md)
     * [DBeaver](compilando_para_instalar/repository/dbeaver.md)
