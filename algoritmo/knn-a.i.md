@@ -6,7 +6,7 @@ description: >-
 
 # Algoritmo KNN
 
-Algoritmo KNN e utilizado no aprendizado de maquina supervisionado, basicamente nesse Artigo vamos implementar esse algoritmo em um cenário de um restaurante internacional
+  Algoritmo KNN e utilizado no aprendizado de maquina supervisionado, basicamente nesse Artigo vamos implementar esse algoritmo em um cenário de um restaurante internacional
 
 #### Montar o cenário
 
