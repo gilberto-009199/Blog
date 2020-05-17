@@ -1,8 +1,6 @@
-# Programas Compilados
+# Dijkstra
 
 {% hint style="info" %}
 Em desenvolvimento
 {% endhint %}
-
-
 

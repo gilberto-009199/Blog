@@ -19,7 +19,7 @@ Para ser mais especifico vou abortar as operações básicas de um compilador e 
 
 #### Leitura do código e sintaxe
 
-  Nessa etapa as linhas de código são lidas e a sintaxe da linguagem é aplicada , por exemplo abrir chaves\(  **`{`**  \) deve ser sequido por um fechar chaves\(  **`}`** \) identificando um bloco de execução.
+  Nessa etapa as linhas de código são lidas e a sintaxe da linguagem é aplicada , por exemplo abrir chaves\(  **`{`**  \) deve ser seguido por um fechar chaves\(  **`}`** \) identificando um bloco de execução.
 
 {% tabs %}
 {% tab title="Code" %}
@@ -47,7 +47,99 @@ function Somar(val0, val1){ <-- Sintax error
 
 #### Compilando GCC 
 
-> Em desenvolvimento consulte OS.dev para mais informações
+> Em desenvolvimento consulte [OSdev.org](https://osdev.org) para mais informações
 
-#### 
+ Primeiramente precisamos Obter o compilador GCC para isso execute:
+
+{% tabs %}
+{% tab title="Bash" %}
+```text
+~$ wget https://ftp.gnu.org/gnu/gcc/gcc-10.1.0/gcc-10.1.0.tar.gz
+```
+{% endtab %}
+
+{% tab title="Result" %}
+```text
+--2020-05-16 09:39:34--https://ftp.gnu.org/gnu/gcc/gcc-10.1.0/
+gcc-10.1.0.tar.gz
+Carregou certificado CA "/etc/ssl/certs/ca-certificates.crt"
+Resolvendo ftp.gnu.org (ftp.gnu.org)...
+ 209.51.188.20, 2001:470:142:3::b
+Conectando-se a ftp.gnu.org (ftp.gnu.org)|209.51.188.20|:443
+... conectado.
+A requisição HTTP foi enviada, aguardando resposta... 200 OK
+Tamanho: 131174790 (125M) [application/x-gzip]
+Salvando em: “gcc-10.1.0.tar.gz”
+
+gcc-10.1.0.tar.gz   100%[===================>] 125,10M      
+ 5,78MB/s    em 21s
+ 
+2020-05-16 09:39:56 (5,96 MB/s) - “gcc-10.1.0.tar.gz” salvo 
+[131174790/131174790]
+```
+{% endtab %}
+{% endtabs %}
+
+Depois de obter o arquivos `gcc-10.1.0.tar.gz`, vamos descompacta-lo usando o comando:
+
+{% tabs %}
+{% tab title="Bash" %}
+```text
+~$ tar -xf gcc-10.1.0.tar.gz
+```
+{% endtab %}
+
+{% tab title="Result" %}
+```text
+dir
+├── gcc-10.1.0
+└── gcc-10.1.0.tar.gz
+```
+{% endtab %}
+{% endtabs %}
+
+ Agora, Vamos compilar e por fim rodar uma aplicação 
+
+{% tabs %}
+{% tab title="Bash" %}
+```text
+~$ cd gcc-10.1.0/
+~$ ./configure 
+--target=i686-elf
+--prefix="$HOME/build"
+--enable-languages=c,c++
+--without-headers
+```
+{% endtab %}
+
+{% tab title="Result" %}
+```text
+
+```
+{% endtab %}
+{% endtabs %}
+
+Opções utilizadas:
+
+* --target=i686-elf                          \#Arquitetura 
+* --prefix="$HOME/build"             \# Local da instalação
+* --enable-languages=c,c++        \# Linguagens que serão suportadas 
+* --without-headers                      \# diz ao [GCC](https://wiki.osdev.org/GCC) para não confiar em nenhuma biblioteca C \(padrão ou tempo de execução\) presente já que sera um compilador cruzado
+
+Agora vamos compilar e mover para o diretório de instalação, Alias isso pode demorar bastante.
+
+```text
+make all-gcc
+make all-target-libgcc
+make install-gcc
+make install-target-libgcc
+```
+
+Mas já podemos compilar um `hellowWord.o` ? Não, falta um conjunto de bibliotecas e ferramentas para lincar as bibliotecas e etc ao executável.
+
+Vamos começar por compilar e implementar o Binutis para obter as ferramentas.
+
+{% hint style="info" %}
+Em desenvolvimento
+{% endhint %}
 
