@@ -24,6 +24,14 @@ Atenção nesse cenário existem varias variáveis  que precisamos considerar, m
 
  Tendo agora um arquivo com a media de consumo de cada nacionalidade em gramas e a quantidade consumida, construa um programa que leia o arquivo com as medias de cada nacionalidade e as comandas e faça o cruzamento dos dados devolvendo a nacionalidade com mais clientes.
 
+{% file src="../.gitbook/assets/mediapornasci.knn.algoritmo.txt" caption="Scientific Institute of Biology and Agriculture." %}
+
+{% file src="../.gitbook/assets/comandas.knn.algoritmo.txt" caption="Comandas do Restaurante" %}
+
+ Esta na hora de produzir o código que usara a media do estudo e as comandas através da distancia euclidiana.
+
+
+
 {% hint style="info" %}
 Em desenvolvimento
 {% endhint %}
