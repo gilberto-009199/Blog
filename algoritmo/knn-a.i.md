@@ -108,11 +108,11 @@ def getEuclidiana( cliente0 , cliente1 ):
 	  Distância euclidiana é a raiz quadrada da soma das
 	 diferenças dos valores dos atributos elevado ao quadrado
   """
-  soma  = (cliente0['carnes_vermelhas'] - cliente1['carne_vermelha']) ** 2
-  soma += (cliente0['carnes_brancas'] - cliente1['carnes_brancas']) ** 2
-  soma += (cliente0['massas'] - cliente1['massas'] ) ** 2
-  soma += (cliente0['frutas'] - cliente1['frutas'] ) ** 2
-  soma += (cliente0['vegetais'] - cliente1['vegetais'] ) ** 2
+  soma  = (cliente0['carnes_vermelhas'] - cliente1['carne_vermelha'])** 2
+  soma += (cliente0['carnes_brancas'] - cliente1['carnes_brancas'])** 2
+  soma += (cliente0['massas'] - cliente1['massas'] )** 2
+  soma += (cliente0['frutas'] - cliente1['frutas'] )** 2
+  soma += (cliente0['vegetais'] - cliente1['vegetais'] )** 2
 	
   return math.sqrt(soma, 2); # ou soma ** (1/2);
 ```
