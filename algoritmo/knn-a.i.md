@@ -64,6 +64,8 @@ Atenção nesse cenário existem varias variáveis  que precisamos considerar, m
 
 
 
+
+
 {% hint style="info" %}
 Em desenvolvimento
 {% endhint %}
