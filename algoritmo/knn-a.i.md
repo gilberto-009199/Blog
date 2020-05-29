@@ -68,20 +68,19 @@ Atenção nesse cenário existem varias variáveis  que precisamos considerar, m
 * Fazer a raiz quadrada
 
 {% hint style="info" %}
-Para os Curiosos e entusiasmados por programação,  a função de raiz na maioria das linguagens que eu conheço implementam uma função com nome de `sqrt( x, 2)` ao invés de `²√`  para as operações, então para evitar aprender a utilizar uma em cada linguagem eu sempre uso `x ** ( 1 / 2 )` .
+Para os Curiosos e entusiasmados por programação,  a função de raiz na maioria das linguagens que eu conheço implementam uma função com nome de `sqrt( x, 2)` ao invés de `²√x`  para as operações, então para evitar aprender a utilizar uma em cada linguagem eu sempre uso a potenciação: `x ** ( 1 / 2 )` .
+
+`sqrt( x, 2 ) == x ** ( 1 / 2 )` ou `sqrt( x, 3 ) == x ** ( 1 / 3 )`
 {% endhint %}
 
 | Carne vermelha | Carne Branca | Massas | Frutas | Vegetais | Soma | Raiz |
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 | 4.0 | 1.0 | 1.0 | 0.019 | 0.81 | 6,829 | 46.63 |
 
-
-
-
-
 {% tabs %}
 {% tab title="JavaScript" %}
 ```text
+// Função que retorna a distancia euclidiana de 2 clientes
 function getEuclidiana( cliente0 , cliente1){
 	/*
 		a distância euclidiana é a raiz quadrada da soma das
@@ -94,7 +93,7 @@ function getEuclidiana( cliente0 , cliente1){
 				   + (cliente0.frutas           - cliente1.frutas         ) ** 2
 				   + (cliente0.vegetais         - cliente0.vegetais       ) ** 2;
 	
-	return soma ** (1/2);
+	return Math.sqrt(soma, 2); // ou soma ** (1/2);
 }
 ```
 {% endtab %}
