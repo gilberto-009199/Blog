@@ -123,6 +123,12 @@ def getEuclidiana( cliente0 , cliente1 ):
 
 ```
 {% endtab %}
+
+{% tab title="C++" %}
+```
+
+```
+{% endtab %}
 {% endtabs %}
 
 
