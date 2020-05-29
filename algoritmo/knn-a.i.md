@@ -87,11 +87,11 @@ function getEuclidiana( cliente0 , cliente1){
 		diferenças dos valores dos atributos elevado ao quadrado
 	*/
 
-	let soma = (cliente0.carnes_vermelhas - cliente1.carne_vermelha ) ** 2
-					 + (cliente0.carnes_brancas   - cliente1.carnes_brancas ) ** 2
-					 + (cliente0.massas           - cliente1.massas         ) ** 2
-				   + (cliente0.frutas           - cliente1.frutas         ) ** 2
-				   + (cliente0.vegetais         - cliente1.vegetais       ) ** 2;
+	let soma = (cliente0.carnes_vermelhas - cliente1.carne_vermelha)** 2
+					 + (cliente0.carnes_brancas   - cliente1.carnes_brancas)** 2
+					 + (cliente0.massas           - cliente1.massas        )** 2
+				   + (cliente0.frutas           - cliente1.frutas        )** 2
+				   + (cliente0.vegetais         - cliente1.vegetais      )** 2;
 	
 	return Math.sqrt(soma, 2); // ou soma ** (1/2);
 }
