@@ -2,6 +2,12 @@
 
 * [Home](README.md)
 
+## Algoritmo
+
+* [Algoritmo KNN](algoritmo/knn-a.i.md)
+* [Pseudo Aleatoriedade](algoritmo/pseudo-aleatoriedade.md)
+* [Dijkstra](algoritmo/dijkstra.md)
+
 ## Linux
 
 * [Compilar Programas](compilando_para_instalar/README.md)
@@ -13,10 +19,4 @@
 ## Java
 
 * [Torrent Client](java/torrent-client.md)
-
-## Algoritmo
-
-* [Algoritmo KNN](algoritmo/knn-a.i.md)
-* [Pseudo Aleatoriedade](algoritmo/pseudo-aleatoriedade.md)
-* [Dijkstra](algoritmo/dijkstra.md)
 
