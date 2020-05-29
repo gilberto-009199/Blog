@@ -28,7 +28,9 @@ Atenção nesse cenário existem varias variáveis  que precisamos considerar, m
 
 {% file src="../.gitbook/assets/comandas.knn.algoritmo.txt" caption="Comandas do Restaurante" %}
 
- Esta na hora de produzir o código que usara a media do estudo e as comandas através da distancia euclidiana.
+ Esta na hora de produzir o código que usara a media do estudo e as comandas para através da distancia euclidiana definir a nacionalidade de cada cliente.
+
+![Vis&#xE3;o dos DataSet](../.gitbook/assets/imagemdosdados.png)
 
 
 
