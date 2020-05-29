@@ -12,7 +12,7 @@ description: >-
 
   Estamos em um ilustre restaurante Italiano dentro do Aeroporto Internacional John F. Kennedy na cidade de New York, nosso cliente possui um clientela internacional bastante variada sendo composta por Americanos, Brasileiros,  Espanhóis e Franceses. O nosso cliente deseja abrir uma filial, mas não sabe em qual nação seus Cardápio Italiano serão mais apreciados.
 
-  Para auxilia lo nosso cliente te enviou as comandas de 5 dias de trabalho com a respectiva quantidade em gramas de Carne vermelha , Carne Banca , Massas, Frutas e Vegetais por pessoa.
+  Para auxilia lo nosso cliente te enviou as comandas de 5 dias de trabalho com a respectiva quantidade em gramas de Carne vermelha , Carne Branca , Massas, Frutas e Vegetais por pessoa.
 
 {% hint style="warning" %}
 Atenção nesse cenário existem varias variáveis  que precisamos considerar, mas não vamos abordar essas questões, para facilitar a implementação do algoritmo. Além é claro que nosso cliente poderia simplesmente perguntar ao cliente qual sua naturalidade.
@@ -58,11 +58,7 @@ Atenção nesse cenário existem varias variáveis  que precisamos considerar, m
 
 * Somar as diferenças 
 
-10.00 10.00 07.24 03.50 02.10 America 
-
-08.00 11.00 06.24 03.64 03.00 America
-
-| Cliente |  Carne vermelha | Carne Banca  | Massas | Frutas | Vegetais |
+| Cliente |  Carne vermelha | Carne Branca  | Massas | Frutas | Vegetais |
 | :---: | :---: | :---: | :---: | :---: | :---: |
 | A | 10.00 g | 10.00 g | 07.24 | 03.50 | 02.10 |
 | B | 08.00 g | 11.00 g | 06.24 | 03.64 | 03.00 |
@@ -71,7 +67,9 @@ Atenção nesse cenário existem varias variáveis  que precisamos considerar, m
 
 * Fazer a raiz quadrada
 
-
+| Carne vermelha | Carne B |
+| :--- | :--- |
+|  |  |
 
 
 
