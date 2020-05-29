@@ -67,7 +67,7 @@ e ou
 
            **--prefix**=&lt;{  Diretório de instalação }&gt;
 
-           **--target**=&lt;{ Arquitetura da compilação como i686-elf }&gt;
+           **--target**=&lt;{ Arquitetura da compilação como por exemplo i686-elf }&gt;
 
   No nosso caso vamos utilizar o --prefix para guardar a compilação no diretório `~/opt/bash/build`.
 

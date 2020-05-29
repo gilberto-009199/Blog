@@ -6,6 +6,12 @@
 
 ![&quot;What I cannot create, I do not undertand&quot; ou &quot;O que n&#xE3;o posso criar, n&#xE3;o entendo&quot;](.gitbook/assets/image%20%281%29.png)
 
+{% page-ref page="algoritmo/knn-a.i.md" %}
+
+{% page-ref page="compilando\_para\_instalar/" %}
+
+{% page-ref page="compilando\_para\_instalar/repository/dbeaver.md" %}
+
 
 
 
