@@ -40,6 +40,28 @@ Atenção nesse cenário existem varias variáveis  que precisamos considerar, m
 
   Para pensar em distancia nos termos da distancia euclidiana, pense que a distancia de uma entidade para outra nada mais é do que o quanto as diferenças de uma entidade possui em relação a outra entidade.
 
+{% tabs %}
+{% tab title="JavaScript" %}
+```text
+
+```
+{% endtab %}
+
+{% tab title="Python" %}
+```text
+
+```
+{% endtab %}
+
+{% tab title="JAVA" %}
+```
+
+```
+{% endtab %}
+{% endtabs %}
+
+
+
 
 
 {% hint style="info" %}
