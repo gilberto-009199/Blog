@@ -38,7 +38,7 @@ Atenção nesse cenário existem varias variáveis  que precisamos considerar, m
 
 #### Função da Distancia Euclidiana
 
-  Para pensar em distancia nos termos da distancia euclidiana , pense que a distancia nada mais é do que o quanto 
+  Para pensar em distancia nos termos da distancia euclidiana, pense que a distancia de uma entidade para outra nada mais é do que o quanto as diferenças de uma entidade possui em relação a outra entidade.
 
 {% hint style="info" %}
 Em desenvolvimento
