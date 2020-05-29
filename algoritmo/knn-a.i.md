@@ -10,6 +10,8 @@ description: >-
 
 ### Montar o cenário
 
+![Vis&#xE3;o dos DataSet](../.gitbook/assets/imagemdosdados.png)
+
   Estamos em um ilustre restaurante Italiano dentro do Aeroporto Internacional John F. Kennedy na cidade de New York, nosso cliente possui um clientela internacional bastante variada sendo composta por Americanos, Brasileiros,  Espanhóis e Franceses. O nosso cliente deseja abrir uma filial, mas não sabe em qual nação seu Cardápio Italiano sera mais apreciados.
 
   Para auxilia lo nosso cliente te enviou as comandas de 5 dias de trabalho com a respectiva quantidade em gramas de Carne vermelha , Carne Branca , Massas, Frutas e Vegetais por pessoa.
@@ -29,8 +31,6 @@ Atenção nesse cenário existem varias variáveis  que precisamos considerar, m
 {% file src="../.gitbook/assets/comandas.knn.algoritmo.txt" caption="Comandas do Restaurante" %}
 
   Esta na hora de produzir o código que usara a media do estudo e as comandas para através da distancia euclidiana definir a nacionalidade de cada cliente.
-
-![Vis&#xE3;o dos DataSet](../.gitbook/assets/imagemdosdados.png)
 
   Para ser mais abrangente em termos de linguagem eu farei o Script em Javascript, Python e JAVA, para assegurar que a maioria compreenda em sua linguagem mais familiar.
 
