@@ -32,7 +32,7 @@ Atenção nesse cenário existem varias variáveis  que precisamos considerar, m
 
 ![Vis&#xE3;o dos DataSet](../.gitbook/assets/imagemdosdados.png)
 
-
+ 
 
 {% hint style="info" %}
 Em desenvolvimento
