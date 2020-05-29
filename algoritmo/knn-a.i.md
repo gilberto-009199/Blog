@@ -6,16 +6,16 @@ description: >-
 
 # Algoritmo KNN
 
-  Algoritmo KNN e utilizado no aprendizado de maquina supervisionado, basicamente nesse Artigo vamos implementar esse algoritmo em um cenário de um restaurante internacional.
+  Algoritmo KNN é utilizado na aprendizagem de maquina supervisionado, basicamente nesse artigo vamos implementar esse algoritmo em um cenário de um restaurante internacional.
 
 ### Montar o cenário
 
-  Estamos em um ilustre restaurante Italiano dentro do Aeroporto Internacional John F. Kennedy na cidade de New York, nosso cliente possui um clientela internacional bastante variada sendo composta por Americanos, Brasileiros,  Espanhóis e Franceses. O nosso cliente deseja abrir uma filial, mas não sabe em qual nação seus Cardápio Italiano serão mais apreciados.
+  Estamos em um ilustre restaurante Italiano dentro do Aeroporto Internacional John F. Kennedy na cidade de New York, nosso cliente possui um clientela internacional bastante variada sendo composta por Americanos, Brasileiros,  Espanhóis e Franceses. O nosso cliente deseja abrir uma filial, mas não sabe em qual nação seu Cardápio Italiano sera mais apreciados.
 
   Para auxilia lo nosso cliente te enviou as comandas de 5 dias de trabalho com a respectiva quantidade em gramas de Carne vermelha , Carne Branca , Massas, Frutas e Vegetais por pessoa.
 
 {% hint style="warning" %}
-Atenção nesse cenário existem varias variáveis  que precisamos considerar, mas não vamos abordar essas questões, para facilitar a implementação do algoritmo. Além é claro que nosso cliente poderia simplesmente perguntar ao cliente qual sua naturalidade.
+Atenção nesse cenário existem varias variáveis  que precisamos considerar, mas não vamos abordar essas questões, para facilitar a implementação do algoritmo. Além é claro que nosso cliente poderia simplesmente perguntar ao cliente qual sua nacionalidade.
 {% endhint %}
 
   Como fonte dos hábitos alimentares dos Americanos, Brasileiros , Espanhóis e Franceses você utilizou um estudo da _International Scientific Institute of Biology and Agriculture_.
@@ -38,7 +38,7 @@ Atenção nesse cenário existem varias variáveis  que precisamos considerar, m
 
 #### Função da Distancia Euclidiana
 
-  Para pensar em distancia nos termos da distancia euclidiana, pense que a distancia de uma entidade para outra nada mais é do que o quanto as diferenças de uma entidade possui em relação a outra entidade.
+  Para pensar em distancia nos termos da distancia euclidiana, pense que a distancia de uma entidade para outra nada mais é do que quantas diferenças uma entidade possui em relação a outra entidade.
 
 * Pegar a diferença entre as propriedades das entidades
 
@@ -83,7 +83,7 @@ Para os Curiosos e entusiasmados por programação,  a função de raiz na maior
 // Função que retorna a distancia euclidiana de 2 clientes
 function getEuclidiana( cliente0 , cliente1){
 	/*
-		a distância euclidiana é a raiz quadrada da soma das
+		Distância euclidiana é a raiz quadrada da soma das
 		diferenças dos valores dos atributos elevado ao quadrado
 	*/
 
@@ -91,7 +91,7 @@ function getEuclidiana( cliente0 , cliente1){
 					 + (cliente0.carnes_brancas   - cliente1.carnes_brancas ) ** 2
 					 + (cliente0.massas           - cliente1.massas         ) ** 2
 				   + (cliente0.frutas           - cliente1.frutas         ) ** 2
-				   + (cliente0.vegetais         - cliente0.vegetais       ) ** 2;
+				   + (cliente0.vegetais         - cliente1.vegetais       ) ** 2;
 	
 	return Math.sqrt(soma, 2); // ou soma ** (1/2);
 }
@@ -100,7 +100,21 @@ function getEuclidiana( cliente0 , cliente1){
 
 {% tab title="Python" %}
 ```text
+import math;
 
+# Função que retorna a distancia euclidiana de 2 clientes
+def getEuclidiana( cliente0 , cliente1 ):
+  """
+	  Distância euclidiana é a raiz quadrada da soma das
+	 diferenças dos valores dos atributos elevado ao quadrado
+  """
+  soma  = (cliente0['carnes_vermelhas'] - cliente1['carne_vermelha']) ** 2
+  soma += (cliente0['carnes_brancas'] - cliente1['carnes_brancas']) ** 2
+  soma += (cliente0['massas'] - cliente1['massas'] ) ** 2
+  soma += (cliente0['frutas'] - cliente1['frutas'] ) ** 2
+  soma += (cliente0['vegetais'] - cliente1['vegetais'] ) ** 2
+	
+  return math.sqrt(soma, 2); # ou soma ** (1/2);
 ```
 {% endtab %}
 
