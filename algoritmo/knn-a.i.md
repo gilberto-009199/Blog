@@ -40,10 +40,60 @@ Atenção nesse cenário existem varias variáveis  que precisamos considerar, m
 
   Para pensar em distancia nos termos da distancia euclidiana, pense que a distancia de uma entidade para outra nada mais é do que o quanto as diferenças de uma entidade possui em relação a outra entidade.
 
+* Pegar a diferença entre as propriedades das entidades
+
+  Primeiro vamos pegar o cliente A que é Americano e consumiu 10.00 g de carne vermelha e vamos pegar a diferença com o cliente B que consumiu 08.00 g de carne vermelha oque nos da: 
+
+| Carne Vermelha A | Carne Vermelha B | Diferença |
+| :---: | :---: | :--- |
+| 10.0 g | 08.0 g | 02.0 g |
+
+* Elevar ao quadrado a diferença 
+
+  Agora com a diferença 2.0 g vamos elevar ao quadrado.
+
+| Diferença | Quadrado |
+| :---: | :---: |
+| 02.0 g | 04.0 g |
+
+* Somar as diferenças 
+
+10.00 10.00 07.24 03.50 02.10 America 
+
+08.00 11.00 06.24 03.64 03.00 America
+
+| Cliente |  Carne vermelha | Carne Banca  | Massas | Frutas | Vegetais |
+| :---: | :---: | :---: | :---: | :---: | :---: |
+| A | 10.00 g | 10.00 g | 07.24 | 03.50 | 02.10 |
+| B | 08.00 g | 11.00 g | 06.24 | 03.64 | 03.00 |
+| A - - - - B | 02.00 g |  -01.00 g | 01.00 | 00.14 | -00.90 |
+| x² | 4.0 | 1.0 | 1.0 | 0.019 | 0.810 |
+
+* Fazer a raiz quadrada
+
+
+
+
+
+
+
 {% tabs %}
 {% tab title="JavaScript" %}
 ```text
+function getEuclidiana( cliente0 , cliente1){
+	/*
+		a distância euclidiana é a raiz quadrada da soma das
+		diferenças dos valores dos atributos elevado ao quadrado
+	*/
 
+	let soma = (cliente0.carnes_vermelhas - cliente1.carne_vermelha ) ** 2
+					 + (cliente0.carnes_brancas   - cliente1.carnes_brancas ) ** 2
+					 + (cliente0.massas           - cliente1.massas         ) ** 2
+				   + (cliente0.frutas           - cliente1.frutas         ) ** 2
+				   + (cliente0.vegetais         - cliente0.vegetais       ) ** 2;
+	
+	return soma ** (1/2);
+}
 ```
 {% endtab %}
 
