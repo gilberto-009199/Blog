@@ -8,7 +8,7 @@ description: >-
 
   Algoritmo KNN e utilizado no aprendizado de maquina supervisionado, basicamente nesse Artigo vamos implementar esse algoritmo em um cenário de um restaurante internacional.
 
-#### Montar o cenário
+### Montar o cenário
 
   Estamos em um ilustre restaurante Italiano dentro do Aeroporto Internacional John F. Kennedy na cidade de New York, nosso cliente possui um clientela internacional bastante variada sendo composta por Americanos, Brasileiros,  Espanhóis e Franceses. O nosso cliente deseja abrir uma filial, mas não sabe em qual nação seus Cardápio Italiano serão mais apreciados.
 
@@ -20,7 +20,7 @@ Atenção nesse cenário existem varias variáveis  que precisamos considerar, m
 
   Como fonte dos hábitos alimentares dos Americanos, Brasileiros , Espanhóis e Franceses você utilizou um estudo da _International Scientific Institute of Biology and Agriculture_.
 
-#### Comece bonitão! Go Horse!
+### Comece bonitão! Go Horse!
 
   Tendo agora um arquivo com a media de consumo de cada nacionalidade em gramas e a quantidade consumida, construa um programa que leia o arquivo com as medias de cada nacionalidade e as comandas e faça o cruzamento dos dados devolvendo a nacionalidade com mais clientes.
 
@@ -63,13 +63,17 @@ Atenção nesse cenário existem varias variáveis  que precisamos considerar, m
 | A | 10.00 g | 10.00 g | 07.24 | 03.50 | 02.10 |
 | B | 08.00 g | 11.00 g | 06.24 | 03.64 | 03.00 |
 | A - - - - B | 02.00 g |  -01.00 g | 01.00 | 00.14 | -00.90 |
-| x² | 4.0 | 1.0 | 1.0 | 0.019 | 0.810 |
+| x² | 4.0 | 1.0 | 1.0 | 0.019 | 0.81 |
 
 * Fazer a raiz quadrada
 
-| Carne vermelha | Carne B |
-| :--- | :--- |
-|  |  |
+{% hint style="info" %}
+Para os Curiosos e entusiasmados por programação,  a função de raiz na maioria das linguagens que eu conheço implementam uma função com nome de `sqrt( x, 2)` ao invés de `²√`  para as operações, então para evitar aprender a utilizar uma em cada linguagem eu sempre uso `x ** ( 1 / 2 )` .
+{% endhint %}
+
+| Carne vermelha | Carne Branca | Massas | Frutas | Vegetais | Soma | Raiz |
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+| 4.0 | 1.0 | 1.0 | 0.019 | 0.81 | 6,829 | 46.63 |
 
 
 
