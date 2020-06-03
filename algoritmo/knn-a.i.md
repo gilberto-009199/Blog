@@ -146,14 +146,14 @@ double getEuclidiana(Cliente cliente0 , Cliente cliente1){
 	 diferenças dos valores dos atributos elevado ao quadrado
  */
 		
- double soma = 0;
- soma += pow((cliente0.carnes_vermelhas - cliente1.carnes_vermelhas),2);
- soma += pow((cliente0.carnes_brancas   - cliente1.carnes_brancas), 2);
- soma += pow((cliente0.massas           - cliente1.massas        ), 2);
- soma += pow((cliente0.frutas           - cliente1.frutas        ), 2);
- soma += pow((cliente0.vegetais         - cliente1.vegetais      ), 2);
-	
- return sqrt(soma);
+	double soma = 0;
+	soma += pow((ind1.getA() - ind2.getA()), 2); 
+	soma += pow((ind1.getB() - ind2.getB()), 2); 
+	soma += pow((ind1.getC() - ind2.getC()), 2); 
+	soma += pow((ind1.getD() - ind2.getD()), 2);
+
+
+	return sqrt(soma);
 }
 ```
 {% endtab %}
