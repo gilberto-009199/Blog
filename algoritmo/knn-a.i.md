@@ -42,41 +42,6 @@ Atenção nesse cenário existem varias variáveis  que precisamos considerar, m
 
 * Pegar a diferença entre as propriedades das entidades
 
-  Primeiro vamos pegar o cliente A que é Americano e consumiu 10.00 g de carne vermelha e vamos pegar a diferença com o cliente B que consumiu 08.00 g de carne vermelha oque nos da: 
-
-| Carne Vermelha A | Carne Vermelha B | Diferença |
-| :---: | :---: | :--- |
-| 10.0 g | 08.0 g | 02.0 g |
-
-* Elevar ao quadrado a diferença 
-
-  Agora com a diferença 2.0 g vamos elevar ao quadrado.
-
-| Diferença | Quadrado |
-| :---: | :---: |
-| 02.0 g | 04.0 g |
-
-* Somar as diferenças 
-
-| Cliente |  Carne vermelha | Carne Branca  | Massas | Frutas | Vegetais |
-| :---: | :---: | :---: | :---: | :---: | :---: |
-| A | 10.00 g | 10.00 g | 07.24 | 03.50 | 02.10 |
-| B | 08.00 g | 11.00 g | 06.24 | 03.64 | 03.00 |
-| A - - - - B | 02.00 g |  -01.00 g | 01.00 | 00.14 | -00.90 |
-| x² | 4.0 | 1.0 | 1.0 | 0.019 | 0.81 |
-
-* Fazer a raiz quadrada
-
-{% hint style="info" %}
-Para os Curiosos e entusiasmados por programação,  a função de raiz na maioria das linguagens que eu conheço implementam uma função com nome de `sqrt( x, 2)` ao invés de `²√x`  para as operações, então para evitar aprender a utilizar uma em cada linguagem eu sempre uso a potenciação: `x ** ( 1 / 2 )` .
-
-`sqrt( x, 2 ) == x ** ( 1 / 2 )` ou `sqrt( x, 3 ) == x ** ( 1 / 3 )`
-{% endhint %}
-
-| Carne vermelha | Carne Branca | Massas | Frutas | Vegetais | Soma | Raiz |
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-| 4.0 | 1.0 | 1.0 | 0.019 | 0.81 | 6,829 | 46.63 |
-
 {% tabs %}
 {% tab title="JavaScript" %}
 ```text
@@ -158,6 +123,41 @@ double getEuclidiana(Cliente cliente0 , Cliente cliente1){
 ```
 {% endtab %}
 {% endtabs %}
+
+  Primeiro vamos pegar o cliente A que é Americano e consumiu 10.00 g de carne vermelha e vamos pegar a diferença com o cliente B que consumiu 08.00 g de carne vermelha oque nos da: 
+
+| Carne Vermelha A | Carne Vermelha B | Diferença |
+| :---: | :---: | :--- |
+| 10.0 g | 08.0 g | 02.0 g |
+
+* Elevar ao quadrado a diferença 
+
+  Agora com a diferença 2.0 g vamos elevar ao quadrado.
+
+| Diferença | Quadrado |
+| :---: | :---: |
+| 02.0 g | 04.0 g |
+
+* Somar as diferenças 
+
+| Cliente |  Carne vermelha | Carne Branca  | Massas | Frutas | Vegetais |
+| :---: | :---: | :---: | :---: | :---: | :---: |
+| A | 10.00 g | 10.00 g | 07.24 | 03.50 | 02.10 |
+| B | 08.00 g | 11.00 g | 06.24 | 03.64 | 03.00 |
+| A - - - - B | 02.00 g |  -01.00 g | 01.00 | 00.14 | -00.90 |
+| x² | 4.0 | 1.0 | 1.0 | 0.019 | 0.81 |
+
+* Fazer a raiz quadrada
+
+{% hint style="info" %}
+Para os Curiosos e entusiasmados por programação,  a função de raiz na maioria das linguagens que eu conheço implementam uma função com nome de `sqrt( x, 2)` ao invés de `²√x`  para as operações, então para evitar aprender a utilizar uma em cada linguagem eu sempre uso a potenciação: `x ** ( 1 / 2 )` .
+
+`sqrt( x, 2 ) == x ** ( 1 / 2 )` ou `sqrt( x, 3 ) == x ** ( 1 / 3 )`
+{% endhint %}
+
+| Carne vermelha | Carne Branca | Massas | Frutas | Vegetais | Soma | Raiz |
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+| 4.0 | 1.0 | 1.0 | 0.019 | 0.81 | 6,829 | 46.63 |
 
 #### Função da Classificação
 
