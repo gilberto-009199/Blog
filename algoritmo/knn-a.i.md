@@ -159,7 +159,9 @@ double getEuclidiana(Cliente cliente0 , Cliente cliente1){
 {% endtab %}
 {% endtabs %}
 
+#### Função da Classificação
 
+  Dentro dessa função vamos comparar o cliente que precisa ser identificado com os clientes que já sabemos a nacionalidade.
 
 
 
