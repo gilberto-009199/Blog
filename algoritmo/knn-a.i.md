@@ -87,7 +87,7 @@ function getEuclidiana( cliente0 , cliente1){
 		diferenças dos valores dos atributos elevado ao quadrado
 	*/
 
-	let soma = (cliente0.carnes_vermelhas - cliente1.carne_vermelha)** 2
+	let soma = (cliente0.carnes_vermelhas - cliente1.carnes_vermelhas)** 2
 					 + (cliente0.carnes_brancas   - cliente1.carnes_brancas)** 2
 					 + (cliente0.massas           - cliente1.massas        )** 2
 				   + (cliente0.frutas           - cliente1.frutas        )** 2
@@ -108,7 +108,7 @@ def getEuclidiana( cliente0 , cliente1 ):
 	  Distância euclidiana é a raiz quadrada da soma das
 	 diferenças dos valores dos atributos elevado ao quadrado
   """
-  soma = (cliente0['carnes_vermelhas'] - cliente1['carne_vermelha'])**2
+  soma = (cliente0['carnes_vermelhas'] - cliente1['carnes_vermelhas'])**2
   soma += (cliente0['carnes_brancas'] - cliente1['carnes_brancas'])**2
   soma += (cliente0['massas'] - cliente1['massas'] )** 2
   soma += (cliente0['frutas'] - cliente1['frutas'] )** 2
