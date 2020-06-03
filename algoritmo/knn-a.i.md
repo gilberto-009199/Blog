@@ -120,7 +120,21 @@ def getEuclidiana( cliente0 , cliente1 ):
 
 {% tab title="JAVA" %}
 ```
-
+public double getEuclidiana(Cliente cliente0 , Cliente cliente1){
+ /*
+ 	 Distância euclidiana é a raiz quadrada da soma das
+	 diferenças dos valores dos atributos elevado ao quadrado
+ */
+		
+ double soma = 0;
+ soma+=Math.pow((cliente0.carnes_vermelhas - cliente1.carnes_vermelhas),2);
+ soma +=Math.pow((cliente0.carnes_brancas   - cliente1.carnes_brancas), 2);
+ soma +=Math.pow((cliente0.massas           - cliente1.massas        ), 2);
+ soma +=Math.pow((cliente0.frutas           - cliente1.frutas        ), 2);
+ soma +=Math.pow((cliente0.vegetais         - cliente1.vegetais      ), 2);
+	
+ return Math.sqrt(soma);
+}
 ```
 {% endtab %}
 
