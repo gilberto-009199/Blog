@@ -24,5 +24,27 @@ description: >-
 
 ###   Implementação
 
-  Primeiro vamos criar um arquivo, chamado MyScript.bash que conterá a mensagem do dia\( Só os fortes entenderão\)
+  Primeiro vamos criar um arquivo, chamado MyScript que conterá a mensagem do dia\( Só os fortes entenderão\).
+
+```bash
+~$ touch MyScript
+```
+
+ Depois vamos escrever `#!/bin/bash`  para dizer qual será o nosso interpretador, ficando assim:
+
+{% tabs %}
+{% tab title="Bash" %}
+```bash
+~$ echo "#!/bin/bash" >> MyScript
+```
+{% endtab %}
+
+{% tab title="MyScript" %}
+```bash
+#!/bin/bash
+```
+{% endtab %}
+{% endtabs %}
+
+  Agora que temos o nosso arquivo aonde colocar nosso script, vamos colocar a nossa mensagem.
 
