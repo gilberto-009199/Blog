@@ -10,6 +10,7 @@
 
 ## Linux
 
+* [Script](script.md)
 * [Compilar Programas](compilando_para_instalar/README.md)
   * [Install Linux Program](compilando_para_instalar/basic.md)
   * [Programas Compilados](compilando_para_instalar/repository/README.md)
