@@ -24,7 +24,7 @@ description: >-
 
 ###   Implementação
 
-  Primeiro vamos criar um arquivo, chamado MyScript que conterá a mensagem do dia\( Só os fortes entenderão\).
+  Primeiro vamos criar um arquivo, chamado `MyScript` que conterá a mensagem do dia\( Só os fortes entenderão\).
 
 ```bash
 ~$ touch ~/MyScript
@@ -91,7 +91,7 @@ work(){
 
   Bem agora que já temos o nosso estilo, vamos utilizar `echo -e` para indicar o comando `echo` que ele deve permitir uso de cores e utilizar o `\e[<{tipoTexto}> ; <{COR}>m    <{Texto}>  \e[0m` , para saber mais sobre as cores utilize esse link do blog do [remontinho](https://blog.remontti.com.br/141) e do [vivaoLinux](https://www.vivaolinux.com.br/artigo/Formatando-o-bash-com-cores-e-efeitos).
 
-Como resultado o nosso script ~/MyScript fica assim:
+Como resultado o nosso script `~/MyScript` fica assim:
 
 ```bash
 #!/bin/bash
@@ -116,7 +116,7 @@ work(){
 }
 ```
 
-  Ao final nosso usuario ao entrar no servidor verá a mensagem da seguinte forma:
+  Ao final nosso usuário ao entrar no servidor verá a mensagem da seguinte forma:
 
 ![Menssagem de entrada com cor](.gitbook/assets/comcor.png)
 
