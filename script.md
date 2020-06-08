@@ -27,7 +27,7 @@ description: >-
   Primeiro vamos criar um arquivo, chamado MyScript que conterá a mensagem do dia\( Só os fortes entenderão\).
 
 ```bash
-~$ touch MyScript
+~$ touch ~/MyScript
 ```
 
  Depois vamos escrever `#!/bin/bash`  para dizer qual será o nosso interpretador, ficando assim:
@@ -35,7 +35,7 @@ description: >-
 {% tabs %}
 {% tab title="Bash" %}
 ```bash
-~$ echo "#!/bin/bash" >> MyScript
+~$ echo "#!/bin/bash" >> ~/MyScript
 ```
 {% endtab %}
 
@@ -62,4 +62,63 @@ work(){
   cd "$work";
 }
 ```
+
+ Bem agora só falta garantir que esse script seja executado ao entrar, para isso vamos editar o arquivo `/home/usuario/.bashrc` que é executado ao entrar em um instancia do Bash e criar um backup antes da alteração.
+
+```bash
+~$ cp ~/.bashrc ~/.bashrc.bkp
+```
+
+ Agora vamos dizer para vincular o nosso script ao arquivo de inicialização do Bash.
+
+```bash
+~$ echo "source ~/MyScript" >> ~/.bashrc
+```
+
+ Agora, na próxima vez que o usuário entrar ele verá:
+
+![Mensagem de entrada](.gitbook/assets/semcor.png)
+
+  Mas esta meio feio, não que isso seja importante, mas se o nosso usuário não ler ou não prestar atenção no que é importante como o comando work.
+
+  Então para resolver isso vamos colorir a nossa mensagem deixando :
+
+| Tipo | Cor | Hex |
+| :--- | :--- | :--- |
+| Texto Normal Explicativo | Azul bebé | \e\[1;36m &lt;TEXTO&gt; \e\[0m |
+| Texto Com informações | Roxo Claro | \e\[1;31m &lt;TEXTO&gt; \e\[0m |
+| Comandos | Vermelho | \e\[1;35m &lt;TEXTO&gt; \e\[0m |
+
+  Bem agora que já temos o nosso estilo, vamos utilizar `echo -e` para indicar o comando `echo` que ele deve permitir uso de cores e utilizar o `\e[<{tipoTexto}> ; <{COR}>m    <{Texto}>  \e[0m` , para saber mais sobre as cores utilize esse link do blog do [remontinho](https://blog.remontti.com.br/141) e do [vivaoLinux](https://www.vivaolinux.com.br/artigo/Formatando-o-bash-com-cores-e-efeitos).
+
+Como resultado o nosso script ~/MyScript fica assim:
+
+```bash
+#!/bin/bash
+
+# Variaveis de trabalho
+#work="$HOME/Área de trabalho/My/";
+work="/opt/workspace";
+#Variaveis formatadas de informacoes
+terminal="\e[1;31m $SHELL\e[0m";
+usuario="\e[1;31m $USER\e[0m";
+workspace="\e[1;31m $work\e[0m";
+# Nome dos Comandos formatados
+comandowork="\e[1;35m work \e[0m";
+# Menssagem do dia kkkk
+echo -e "\e[1;36m Bem-vindo, $usuario \e[0m";
+echo -e "\e[1;36m Shell: $terminal \e[0m";
+echo -e "\e[1;36m Work: $workspace \e[0m";
+echo -e "\e[1;36m Para ir Digite: $comandowork \e[0m";
+
+work(){
+  cd "$work";
+}
+```
+
+  Ao final nosso usuario ao entrar no servidor verá a mensagem da seguinte forma:
+
+![Menssagem de entrada com cor](.gitbook/assets/comcor.png)
+
+Dessa maneira caso o nosso usuário não queira ler todas as instruções, por causa da cor diferente a palavra work irá atrair a atenção, além é claro de saber agora aonde esta o diretório de trabalho da aplicação.
 
