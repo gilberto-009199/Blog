@@ -46,5 +46,20 @@ description: >-
 {% endtab %}
 {% endtabs %}
 
-  Agora que temos o nosso arquivo aonde colocar nosso script, vamos colocar a nossa mensagem.
+  Agora que temos o nosso script, vamos colocar a nossa mensagem.
+
+```bash
+#!/bin/bash
+#  Diretorio de trabalho
+work="/opt/workspace";
+# Menssagem do dia kkkk
+echo " Bem-vindo, $USER ";
+echo " Shell: $SHELL ";
+echo " Work: $work ";
+echo " Para ir Digite: work ";
+
+work(){
+  cd "$work";
+}
+```
 
