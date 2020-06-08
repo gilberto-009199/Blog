@@ -6,5 +6,23 @@ description: >-
 
 # Script
 
-  Dentro do ambiente corporativo, o software pode ser vendido de 2 formas, a primeira enviando a aplicação para o cliente implantar na empresa os conhecidos software de prateleira e por licenciamento aonde o software ou parte dele fica na empresa criadora do produto ou uma associada da região.
+  As aplicações muitas vezes vão precisar executar operações que não estão relacionadas com a logica de negocio de seus cliente, mas com a propria funcionamento da aplicação como backup, limpeza de logs e remoção de arquivos como imagens não mais utilizadas. 
+
+###   Para solucionar isso?
+
+  Alguns desenvolvedores preferem usar suas línguas nativas como javascript, java, php e etc, para criar as rotinas necessárias, mas como sou um usuário de Debian e Manjaro prefiro utilizar o Bash, pois ele já possui um serie de ferramentas já implementadas dentro do sistema operacional, além de ser bem mais fácil e rápido codificar programas que operem com arquivos já que pode ser testado rapidamente.
+
+####   Montando o cenário
+
+  Você é um programador Nodejs recém saído do curso técnico, na sua primeira empresa, depois de muitos dias de testes e cruds que você fez para sua nova empresa, chega o dia em que só tem você para subir suas alterações para produção.
+
+   Nesse momento o responsável pela qualidade e o sênior permitem você subir em produção é te enviam a chave ssh para a conexão, depois de se conetar você se pergunta aonde esta o diretório de produção? O sênior lé diz que fica em `/opt/workspace` . imediatamente você entra no diretório e da os famosos `git pull origin master` e executa `nodemon ou pm` para reiniciar a aplicação.
+
+####   Ideia
+
+  Pensando sobre isso, antes de dormir você pensa como teria sido mais eficiente se assim que você entra se aparece se uma mensagem dizendo aonde esta o diretório da aplicação.
+
+###   Implementação
+
+  Primeiro vamos criar um arquivo, chamado MyScript.bash que conterá a mensagem do dia\( Só os fortes entenderão\)
 
