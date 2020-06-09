@@ -7,25 +7,25 @@ description: >-
 
 # Compilar Programas
 
-### Por que não é familiar?
+## Por que não é familiar?
 
-   A maioria de nos nasce em com um Windows e aprendi a baixar programas já compilados ou com instaladores que não especificam suas operações internas, mas isso é um erro? Não, a responsabilidade de mostrar ao usuário oque você como desenvolvedor esta operando na maquina do usuário  de modo que qualquer um entenda não e sua responsabilidade, mas convenhamos que isso poderia trazer uma nova visão  de usuários e também permitir que usuários possam resolver problemas do software em relação ao seu computador.
+A maioria de nos nasce em com um Windows e aprendi a baixar programas já compilados ou com instaladores que não especificam suas operações internas, mas isso é um erro? Não, a responsabilidade de mostrar ao usuário oque você como desenvolvedor esta operando na maquina do usuário de modo que qualquer um entenda não e sua responsabilidade, mas convenhamos que isso poderia trazer uma nova visão de usuários e também permitir que usuários possam resolver problemas do software em relação ao seu computador.
 
-### Operações internas
+## Operações internas
 
 Por mais magico que um compilador possa parecer o mesmo também é um programa que assim como todos os outros foi compilado.
 
-Para ser mais especifico vou abortar as operações básicas de um compilador e no fim vamos compilar um gcc.  
+Para ser mais especifico vou abortar as operações básicas de um compilador e no fim vamos compilar um gcc.
 
-#### Leitura do código e sintaxe
+### Leitura do código e sintaxe
 
-  Nessa etapa as linhas de código são lidas e a sintaxe da linguagem é aplicada , por exemplo abrir chaves\(  **`{`**  \) deve ser seguido por um fechar chaves\(  **`}`** \) identificando um bloco de execução.
+Nessa etapa as linhas de código são lidas e a sintaxe da linguagem é aplicada , por exemplo abrir chaves\( **`{`** \) deve ser seguido por um fechar chaves\( **`}`** \) identificando um bloco de execução.
 
 {% tabs %}
 {% tab title="Code" %}
 ```text
 function Somar(val0, val1){
-   alert(val0 + val1); 
+   alert(val0 + val1);
 ```
 {% endtab %}
 
@@ -39,17 +39,17 @@ function Somar(val0, val1){ <-- Sintax error
 
 É e nessa etapa aonde entra os analisadores Léxico, sintático, semântico e o gerador de código.
 
-   Analisador **Léxico** responsável por organizar as palavras e símbolos reservados da linguagem como `function`.
+Analisador **Léxico** responsável por organizar as palavras e símbolos reservados da linguagem como `function`.
 
-   Analisador **Sintático** se encarrega de verificar a sequencia de símbolos  esta correta como  `+, -, *, / e etc`, exemplo:   `val0 + val1 == 22` .
+Analisador **Sintático** se encarrega de verificar a sequencia de símbolos esta correta como `+, -, *, / e etc`, exemplo: `val0 + val1 == 22` .
 
-  Por fim o analisador Semântico gera um mapa\(Uma estrutura de dados\) com a estrutura do programa e o gerador de código lé a estrutura passando da estrutura para uma linguagem de baixo nível seja ela C ou Assemble para por fim montar ou chamar um compilador que monte  o programa uma descrição mais completa se encontra nesse [link](https://sites.icmc.usp.br/delamaro/slidescompiladores/compiladoresfinal.pdf).
+Por fim o analisador Semântico gera um mapa\(Uma estrutura de dados\) com a estrutura do programa e o gerador de código lé a estrutura passando da estrutura para uma linguagem de baixo nível seja ela C ou Assemble para por fim montar ou chamar um compilador que monte o programa uma descrição mais completa se encontra nesse [link](https://sites.icmc.usp.br/delamaro/slidescompiladores/compiladoresfinal.pdf).
 
-#### Compilando GCC 
+### Compilando GCC
 
 > Em desenvolvimento consulte [OSdev.org](https://osdev.org) para mais informações
 
- Primeiramente precisamos Obter o compilador GCC para isso execute:
+Primeiramente precisamos Obter o compilador GCC para isso execute:
 
 {% tabs %}
 {% tab title="Bash" %}
@@ -73,7 +73,7 @@ Salvando em: “gcc-10.1.0.tar.gz”
 
 gcc-10.1.0.tar.gz   100%[===================>] 125,10M      
  5,78MB/s    em 21s
- 
+
 2020-05-16 09:39:56 (5,96 MB/s) - “gcc-10.1.0.tar.gz” salvo 
 [131174790/131174790]
 ```
@@ -98,7 +98,7 @@ dir
 {% endtab %}
 {% endtabs %}
 
- Agora, Vamos compilar e por fim rodar uma aplicação 
+Agora, Vamos compilar e por fim rodar uma aplicação
 
 {% tabs %}
 {% tab title="Bash" %}
