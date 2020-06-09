@@ -9,9 +9,9 @@ DBeaver é um programa feito em java que utiliza a JPA e jdbc para conectar em d
 Para começar precisaremos do código fonte, para isso vamos clonar o repositório:
 
 ```text
-~$ git clone https://github.com/dbeaver/dbeaver.git dbeaver
-~$ cd dbeaver
-~$ mvn package   # ou mvn install
+$ git clone https://github.com/dbeaver/dbeaver.git dbeaver
+$ cd dbeaver
+$ mvn package   # ou mvn install
 ```
 
 Depois disso as releases estarão em `product/standalone/target/products/` , dentro da pasta terá um compila do para Linux, MacOS e Windows.
