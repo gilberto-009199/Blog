@@ -64,10 +64,10 @@ Mas por que temos essa diferença, na realidade para instalar um software você 
 
 Normalmente todos os script de configuração fornecem algumas opções entre elas as mais comuns são
 
-```text
-       **--prefix**=&lt;{  Diretório de instalação }&gt;
-
-       **--target**=&lt;{ Arquitetura da compilação como por exemplo i686-elf }&gt;
+```bash
+--prefix=<{  Diretório de instalação }>;
+--target=<{ Arquitetura da compilação 
+como por exemplo i686-elf }>;
 ```
 
 No nosso caso vamos utilizar o --prefix para guardar a compilação no diretório `~/opt/bash/build`.
