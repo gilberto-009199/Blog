@@ -150,7 +150,7 @@ Primeiro vamos pegar o cliente A que é Americano e consumiu 10.00 g de carne ve
 * Fazer a raiz quadrada
 
 {% hint style="info" %}
-Para os Curiosos e entusiasmados por programação, a função de raiz na maioria das linguagens que eu conheço implementam uma função com nome de `sqrt( x, 2)` ao invés de `²√x` para as operações, então para evitar aprender a utilizar uma em cada linguagem eu sempre uso a potenciação: `x ** ( 1 / 2 )` .
+Para os Curiosos e entusiasmados por programação, a função de raiz na maioria das linguagens que eu conheço implementam uma função com nome de `sqrt( x, 2)` ao invés de `²√x` para as operações, então para evitar aprender a utilizar uma em cada linguagem eu sempre uso a potenciação: `x ** ( 1 / 2 )`  .
 
 `sqrt( x, 2 ) == x ** ( 1 / 2 )` ou `sqrt( x, 3 ) == x ** ( 1 / 3 )`
 {% endhint %}
