@@ -163,6 +163,8 @@ Para os Curiosos e entusiasmados por programação, a função de raiz na maiori
 
 Dentro dessa função vamos comparar o cliente que precisa ser identificado com os clientes que já sabemos a nacionalidade.
 
+ Vamos criar uma vetor que indexe as relações de distancia entre as entidades cliente não identificadas\(Comanda\) para os clientes do estudo.
+
 {% hint style="info" %}
 Em desenvolvimento
 {% endhint %}
