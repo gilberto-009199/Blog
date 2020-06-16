@@ -6,45 +6,45 @@ description: >-
 
 # Algoritmo KNN
 
-Algoritmo KNN é utilizado na aprendizagem de maquina supervisionado, basicamente nesse artigo vamos implementar esse algoritmo em um cenário de um restaurante internacional.
+  Algoritmo KNN é utilizado na aprendizagem de maquina supervisionado, basicamente nesse artigo vamos implementar esse algoritmo em um cenário de um restaurante internacional.
 
 ## Montar o cenário
 
 ![Vis&#xE3;o dos DataSet](../.gitbook/assets/imagemdosdados.png)
 
-Estamos em um ilustre restaurante Italiano dentro do Aeroporto Internacional John F. Kennedy na cidade de New York, nosso cliente possui um clientela internacional bastante variada sendo composta por Americanos, Brasileiros, Espanhóis e Franceses. O nosso cliente deseja abrir uma filial, mas não sabe em qual nação seu Cardápio Italiano sera mais apreciados.
+  Estamos em um ilustre restaurante Italiano dentro do Aeroporto Internacional John F. Kennedy na cidade de New York, nosso cliente possui um clientela internacional bastante variada sendo composta por Americanos, Brasileiros, Espanhóis e Franceses. O nosso cliente deseja abrir uma filial, mas não sabe em qual nação seu Cardápio Italiano sera mais apreciados.
 
-Para auxilia lo nosso cliente te enviou as comandas de 5 dias de trabalho com a respectiva quantidade em gramas de Carne vermelha , Carne Branca , Massas, Frutas e Vegetais por pessoa.
+  Para auxilia lo nosso cliente te enviou as comandas de 5 dias de trabalho com a respectiva quantidade em gramas de Carne vermelha , Carne Branca , Massas, Frutas e Vegetais por pessoa.
 
 {% hint style="warning" %}
 Atenção nesse cenário existem varias variáveis que precisamos considerar, mas não vamos abordar essas questões, para facilitar a implementação do algoritmo. Além é claro que nosso cliente poderia simplesmente perguntar ao cliente qual sua nacionalidade.
 {% endhint %}
 
-Como fonte dos hábitos alimentares dos Americanos, Brasileiros , Espanhóis e Franceses você utilizou um estudo da _International Scientific Institute of Biology and Agriculture_.
+  Como fonte dos hábitos alimentares dos Americanos, Brasileiros , Espanhóis e Franceses você utilizou um estudo da _International Scientific Institute of Biology and Agriculture_.
 
 ## Comece bonitão! Go Horse!
 
-Tendo agora um arquivo com a media de consumo de cada nacionalidade em gramas e a quantidade consumida, construa um programa que leia o arquivo com as medias de cada nacionalidade e as comandas e faça o cruzamento dos dados devolvendo a nacionalidade com mais clientes.
+  Tendo agora um arquivo com a media de consumo de cada nacionalidade em gramas e a quantidade consumida, construa um programa que leia o arquivo com as medias de cada nacionalidade e as comandas e faça o cruzamento dos dados devolvendo a nacionalidade com mais clientes.
 
 {% file src="../.gitbook/assets/mediapornasci.knn.algoritmo.txt" caption="Scientific Institute of Biology and Agriculture." %}
 
 {% file src="../.gitbook/assets/comandas.knn.algoritmo.txt" caption="Comandas do Restaurante" %}
 
-Esta na hora de produzir o código que usara a media do estudo e as comandas para através da distancia euclidiana definir a nacionalidade de cada cliente.
+  Esta na hora de produzir o código que usara a media do estudo e as comandas para através da distancia euclidiana definir a nacionalidade de cada cliente.
 
-Para ser mais abrangente em termos de linguagem eu farei o Script em Javascript, Python e JAVA, para assegurar que a maioria compreenda em sua linguagem mais familiar.
+  Para ser mais abrangente em termos de linguagem eu farei o Script em Javascript, Python e JAVA, para assegurar que a maioria compreenda em sua linguagem mais familiar.
 
-Antes de procedermos saiba que as descrições podem estar um tanto complexas para falar a verdade, então não exite em pegar uma café e/ou ler uma 2° vez.
+  Antes de procedermos saiba que as descrições podem estar um tanto complexas para falar a verdade, então não exite em pegar uma café e/ou ler uma 2° vez.
 
 ### Função da Distancia Euclidiana
 
-Para pensar em distancia nos termos da distancia euclidiana, pense que a distancia de uma entidade para outra nada mais é do que quantas diferenças uma entidade possui em relação a outra entidade.
+  Para pensar em distancia nos termos da distancia euclidiana, pense que a distancia de uma entidade para outra nada mais é do que quantas diferenças uma entidade possui em relação a outra entidade.
 
 * Pegar a diferença entre as propriedades das entidades
 
 {% tabs %}
 {% tab title="JavaScript" %}
-```text
+```javascript
 // Função que retorna a distancia euclidiana de 2 clientes
 function getEuclidiana( cliente0 , cliente1){
     /*
@@ -64,7 +64,7 @@ function getEuclidiana( cliente0 , cliente1){
 {% endtab %}
 
 {% tab title="Python" %}
-```text
+```python
 import math;
 
 # Função que retorna a distancia euclidiana de 2 clientes
@@ -84,7 +84,7 @@ def getEuclidiana( cliente0 , cliente1 ):
 {% endtab %}
 
 {% tab title="JAVA" %}
-```text
+```java
 public double getEuclidiana(Cliente cliente0 , Cliente cliente1){
  /*
       Distância euclidiana é a raiz quadrada da soma das
@@ -104,7 +104,7 @@ public double getEuclidiana(Cliente cliente0 , Cliente cliente1){
 {% endtab %}
 
 {% tab title="C++" %}
-```text
+```cpp
 double getEuclidiana(Cliente cliente0 , Cliente cliente1){
  /*
       Distância euclidiana é a raiz quadrada da soma das
@@ -124,7 +124,7 @@ double getEuclidiana(Cliente cliente0 , Cliente cliente1){
 {% endtab %}
 {% endtabs %}
 
-Primeiro vamos pegar o cliente A que é Americano e consumiu 10.00 g de carne vermelha e vamos pegar a diferença com o cliente B que consumiu 08.00 g de carne vermelha oque nos da:
+  Primeiro vamos pegar o cliente A que é Americano e consumiu 10.00 g de carne vermelha e vamos pegar a diferença com o cliente B que consumiu 08.00 g de carne vermelha oque nos da:
 
 | Carne Vermelha A | Carne Vermelha B | Diferença |
 | :---: | :---: | :--- |
@@ -161,9 +161,48 @@ Para os Curiosos e entusiasmados por programação, a função de raiz na maiori
 
 ### Função da Classificação
 
-Dentro dessa função vamos comparar o cliente que precisa ser identificado com os clientes que já sabemos a nacionalidade.
+  Dentro dessa função vamos comparar o cliente que precisa ser identificado com os clientes que já sabemos a nacionalidade.
 
- Vamos criar uma vetor que indexe as relações de distancia entre as entidades cliente não identificadas\(Comanda\) para os clientes do estudo.
+ Depois criar uma vetor que indexe as relações de distancia entre as entidades cliente não identificadas\(Comanda\) para os clientes do estudo.
+
+####   Pegando os dados
+
+  Começamos lendo os dados nos dois arquivo e adicionando nas nossas listas. para isso vamos criar uma função para ler e montar os dados.
+
+{% tabs %}
+{% tab title="Python" %}
+```python
+def le_arquivo(nome):
+    # Lista com os dados pegos linha por linha
+    listDados = [];
+    # Abre o arquivo para leitura 'r'
+    with open( nome,'r') as arquivo:
+        # Le o arquivo linah por linha
+        for line in arquivo:
+            # Corta o texto da linha para pegar cada dado
+            carne_vermelha  = float(line[4:9]);
+            carne_branca    = float(line[13:18]);
+            massa           = float(line[22:27]);
+            fruta           = float(line[31:36]);
+            vegetais        = float(line[40:45]);
+            nascionalidade  = line[50:57];
+            # Monta o Cliente e adiciona na lista 
+            listDados.append({  'carnes_vermelhas':carne_vermelha,
+                                'carnes_brancas':carne_branca,
+                                'massas':massa,
+                                'frutas':fruta,
+                                'vegetais':vegetais,
+                                'nascionalidade':nascionalidade
+                             });
+        # Fecha o arquivo aberto
+        arquivo.close();
+    # Retorna as informação guardadas na lista
+    return listDados;
+```
+{% endtab %}
+{% endtabs %}
+
+Agora que já podemos ler vamos pegar os dados do estudo que esta no arquivo de nome`mediaPorNasci.knn.algoritmo.txt` e os dados das comandas não identificadas no arquivo `comandas.knn.algoritmo.txt` , e começar a comparação.
 
 {% hint style="info" %}
 Em desenvolvimento
