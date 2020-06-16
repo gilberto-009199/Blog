@@ -144,8 +144,8 @@ double getEuclidiana(Cliente cliente0 , Cliente cliente1){
 | :---: | :---: | :---: | :---: | :---: | :---: |
 | A | 10.00 g | 10.00 g | 07.24 | 03.50 | 02.10 |
 | B | 08.00 g | 11.00 g | 06.24 | 03.64 | 03.00 |
-| A - - - - B | 02.00 g | -01.00 g | 01.00 | 00.14 | -00.90 |
-| x² | 4.0 | 1.0 | 1.0 | 0.019 | 0.81 |
+| A  **-**  B | 02.00 g | -01.00 g | 01.00 | 00.14 | -00.90 |
+| x**²** | 4.0 | 1.0 | 1.0 | 0.019 | 0.81 |
 
 * Fazer a raiz quadrada
 
@@ -202,9 +202,36 @@ def le_arquivo(nome):
 {% endtab %}
 {% endtabs %}
 
-Agora que já podemos ler vamos pegar os dados do estudo que esta no arquivo de nome`mediaPorNasci.knn.algoritmo.txt` e os dados das comandas não identificadas no arquivo `comandas.knn.algoritmo.txt` , e começar a comparação.
+  Agora que já podemos ler vamos pegar os dados do estudo que esta no arquivo de nome`mediaPorNasci.knn.algoritmo.txt` e os dados das comandas não identificadas no arquivo `comandas.knn.algoritmo.txt` , e começar a comparação.
 
-{% hint style="info" %}
-Em desenvolvimento
-{% endhint %}
+  Vamos criar uma estrutura  de repetição que para pegar cada um dos clientes não identificas e  outro loop interno que se em carregara de comparar os dados do cliente não identificado com os dados do estudo.
+
+{% tabs %}
+{% tab title="Python" %}
+```python
+# Pegando os dados 
+listClassificados    = le_arquivo('mediaPorNasci.knn.algoritmo.txt');
+listNaoClassificados = le_arquivo('comandas.knn.algoritmo.txt');
+
+for clienteNaoIdentificado in listNaoClassificados:
+    # Codigo para comparar e determinar a classe mais proxima
+    for pessoaIdentificada in listClassificados:
+        # Codigo que vai comparar o
+        # ClienteNãoIdentificado com
+        # cada um dos clientesIdentificados no estudo 
+        
+```
+{% endtab %}
+{% endtabs %}
+
+  Para nos ajuda a entender vamos resumir nossas variáveis ate agora:
+
+| **VARIÁVEL** | **DESCRIÇÃO** |
+| :--- | :--- |
+| **`listClassificados`** | Uma lista com as pessoas do estudo e suas medias de consumo de  Carne vermelha , Carne Branca , Massas, Frutas e Vegetais por refeição. |
+| **`listNaoClassificados`** | Uma lista com os clientes das comandas e seu  consumo de  Carne vermelha , Carne Branca , Massas, Frutas e Vegetais. |
+| **`clienteNaoIdentificado`** |  Cliente da comanda que ainda não foi identificado de qual nacionalidade ele pertence! |
+| **`pessoaIdentificada`** |   Pessoa do Estudo com a media de consumo por refeição e sua nacionalidade. |
+
+
 
