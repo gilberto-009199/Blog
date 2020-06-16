@@ -10,7 +10,7 @@ description: >-
 
 ## Montar o cenário
 
-![Vis&#xE3;o dos DataSet](../.gitbook/assets/imagemdosdados.png)
+![](../.gitbook/assets/imagemdosdados.png)
 
   Estamos em um ilustre restaurante Italiano dentro do Aeroporto Internacional John F. Kennedy na cidade de New York, nosso cliente possui um clientela internacional bastante variada sendo composta por Americanos, Brasileiros, Espanhóis e Franceses. O nosso cliente deseja abrir uma filial, mas não sabe em qual nação seu Cardápio Italiano sera mais apreciados.
 
@@ -53,10 +53,10 @@ function getEuclidiana( cliente0 , cliente1){
     */
 
     let soma = (cliente0.carnes_vermelhas - cliente1.carnes_vermelhas)** 2
-                     + (cliente0.carnes_brancas   - cliente1.carnes_brancas)** 2
-                     + (cliente0.massas           - cliente1.massas        )** 2
-                   + (cliente0.frutas           - cliente1.frutas        )** 2
-                   + (cliente0.vegetais         - cliente1.vegetais      )** 2;
+             + (cliente0.carnes_brancas - cliente1.carnes_brancas)** 2
+             + (cliente0.massas        - cliente1.massas        )** 2
+             + (cliente0.frutas        - cliente1.frutas        )** 2
+             + (cliente0.vegetais      - cliente1.vegetais      )** 2;
 
     return Math.sqrt(soma, 2); // ou soma ** (1/2);
 }
@@ -112,10 +112,10 @@ double getEuclidiana(Cliente cliente0 , Cliente cliente1){
  */
 
     double soma = 0;
-    soma += pow((ind1.getA() - ind2.getA()), 2); 
-    soma += pow((ind1.getB() - ind2.getB()), 2); 
-    soma += pow((ind1.getC() - ind2.getC()), 2); 
-    soma += pow((ind1.getD() - ind2.getD()), 2);
+    soma += pow((cliente0.getA() - cliente1.getA()), 2); 
+    soma += pow((cliente0.getB() - cliente1.getB()), 2); 
+    soma += pow((cliente0.getC() - cliente1.getC()), 2); 
+    soma += pow((cliente0.getD() - cliente1.getD()), 2);
 
 
     return sqrt(soma);
@@ -204,7 +204,7 @@ def le_arquivo(nome):
 
   Agora que já podemos ler vamos pegar os dados do estudo que esta no arquivo de nome`mediaPorNasci.knn.algoritmo.txt` e os dados das comandas não identificadas no arquivo `comandas.knn.algoritmo.txt` , e começar a comparação.
 
-  Vamos criar uma estrutura  de repetição que para pegar cada um dos clientes não identificas e  outro loop interno que se em carregara de comparar os dados do cliente não identificado com os dados do estudo.
+  Vamos criar uma estrutura  de repetição que para pegar cada um dos clientes não identificas e  outro **loop** interno que se em carregara de comparar os dados do cliente não identificado com os dados do estudo.
 
 {% tabs %}
 {% tab title="Python" %}
@@ -212,13 +212,18 @@ def le_arquivo(nome):
 # Pegando os dados 
 listClassificados    = le_arquivo('mediaPorNasci.knn.algoritmo.txt');
 listNaoClassificados = le_arquivo('comandas.knn.algoritmo.txt');
+# Variaveis Acumuladoras de cada nacionalidade
+qtdAmericanos = 0;
+qtdEspanhol = 0;
+qtdFrances = 0;
+qtdBrasileiro = 0;
 
 for clienteNaoIdentificado in listNaoClassificados:
     # Codigo para comparar e determinar a classe mais proxima
     for pessoaIdentificada in listClassificados:
         # Codigo que vai comparar o
         # ClienteNãoIdentificado com
-        # cada um dos clientesIdentificados no estudo 
+        # cada um dos pessoaIdentificada no estudo 
         
 ```
 {% endtab %}
@@ -230,8 +235,170 @@ for clienteNaoIdentificado in listNaoClassificados:
 | :--- | :--- |
 | **`listClassificados`** | Uma lista com as pessoas do estudo e suas medias de consumo de  Carne vermelha , Carne Branca , Massas, Frutas e Vegetais por refeição. |
 | **`listNaoClassificados`** | Uma lista com os clientes das comandas e seu  consumo de  Carne vermelha , Carne Branca , Massas, Frutas e Vegetais. |
-| **`clienteNaoIdentificado`** |  Cliente da comanda que ainda não foi identificado de qual nacionalidade ele pertence! |
+| **`clienteNaoIdentificado`** |  Cliente da comanda que ainda não foi definido de qual nacionalidade ele pertence! |
 | **`pessoaIdentificada`** |   Pessoa do Estudo com a media de consumo por refeição e sua nacionalidade. |
+
+  Bem agora que já pegamos cada `clienteNaoIdentificado`  e cada  `pessoaIdentificada` do estudo, vamos precisar comparar cada um dos `clienteNaoIdentificado` com todas as   `pessoaIdentificada` e guardar a distancia como mostrada na imagem abaixo.
+
+![Imagem das compara&#xE7;&#xF5;es](../.gitbook/assets/imagemcomparacoes.png)
+
+  Case o nosso `clienteNaoIdentificado` seja:
+
+* Americano 
+
+![](../.gitbook/assets/imagemcomparacoesamericano.png)
+
+* Espanhol
+
+![](../.gitbook/assets/imagemcomparacoesespanhol.png)
+
+* Brasileiro
+
+![](../.gitbook/assets/imagemcomparacoesbrasileiro.png)
+
+* Frances
+
+![](../.gitbook/assets/imagemcomparacoesfrances.png)
+
+  
+
+  Através da comparação com as pessoas já identificadas podemos extrapolar de qual nacionalidade  e o nosso cliente.
+
+  Então vamos implementar criando uma lista chamada `listIndexadaPelaDistancia` que conterá a distancia que cada pessoas já identificada estão do cliente ainda não identificado. E depois vamos ordenar a lista para que tenhamos o mais próximo na 1° posição, o segundo na 2° posição e assim por diante deixando o  mais distante na ultima posição.
+
+{% tabs %}
+{% tab title="Python" %}
+```python
+for clienteNaoIdentificado in listNaoClassificados:
+    # Lista que ira ordenarar as pessoa mais proximos dele 
+    listIndexadaPelaDistancia = [];
+    for pessoaIdentificada in listClassificados:
+        # Comparando e pegando a distancia
+        distancia = getEuclidiana(clienteNaoIdentificado,pessoaIdentificada)
+        # Colocando na lista de ordenacao
+        listIndexadaPelaDistancia.append({
+                  'distancia':distancia,
+                  'nascionalidade': pessoaIdentificada['nascionalidade']
+                 });
+```
+{% endtab %}
+{% endtabs %}
+
+Vamos ordenar a lista:
+
+{% tabs %}
+{% tab title="Python" %}
+```python
+    # Hora de ordenar pelos com menor
+    # distancia
+    funcaoDeOrdenacao= lambda clienteIndexado: clienteIndexado['distancia'];
+    # Usando o recusro de sort da linguagem
+    listIndexadaPelaDistancia.sort(key=funcaoDeOrdenacao)
+```
+{% endtab %}
+{% endtabs %}
+
+  Agora que já temos a relação entre **`clienteNaoIdentificado`** e todas as **`pessoaIdentificada`** , precisamos determinar o quão distante a gente vai considerar para classificação , ao seja, quais das **`pessoaIdentificada`** estão mais próximas para nos ajudar a classificar o **`clienteNaoIdentificado`** , eu decidi escolher os 7 primeiros da lista ordenada.
+
+{% tabs %}
+{% tab title="Python" %}
+```python
+    K = 7;
+    for i in listIndexadaPelaDistancia[:K]:
+        # Codigo que verifica qual nascionalidade é predominate
+```
+{% endtab %}
+{% endtabs %}
+
+ Agora só falta contar a nacionalidade predominante nesse conjunto de 7 pessoas próximas e teremos nosso classificador.
+
+{% tabs %}
+{% tab title="Python" %}
+```python
+    K = 7;
+    # Escolhi 7, mas na minha opniao seria melhor
+    # pegar uma porcentagem dos classificados como 30% algo assim,
+    # quem sabe , afinal eu não sou um experti em algoritmos de 
+    # aprendizado supervisionado de maguina
+    isAmerica = 0;
+    isFrances = 0;
+    isEspanho = 0;
+    isBrasile = 0;
+    for i in listIndexadaPelaDistancia[:K]:
+        
+        if i['nascionalidade'] == "America":
+            isAmerica += 1;
+        elif i['nascionalidade'] == "Espanho":
+            isEspanho += 1;
+        elif i['nascionalidade'] == "Frances":
+            isFrances += 1;
+        elif i['nascionalidade'] == "Brasile":
+            isBrasile += 1;
+        else:
+            print("Categoria não identificada")
+```
+{% endtab %}
+{% endtabs %}
+
+  Agora vamos verificar qual é a predominante verificando qual das variáveis acumuladoras e maior que as outras.
+
+{% tabs %}
+{% tab title="Python" %}
+```python
+
+categoriaDefinida = "Indefinida...";
+# IFs apra verificar qual nacionalidade esta mais presente
+if isAmerica>isEspanho and isAmerica > isFrances and isAmerica> isBrasile:
+    categoriaDefinida = "America";
+    qtdAmericanos += 1;
+elif isEspanho>isAmerica and isEspanho>isFrances and isEspanho> isBrasile:
+    categoriaDefinida = "Espanho";
+    qtdEspanhol += 1;
+elif isFrances>isAmerica and isFrances>isEspanho and isFrances> isBrasile:
+    categoriaDefinida = "Frances";
+    qtdFrances += 1;
+elif isBrasile>isAmerica and isBrasile>isEspanho and isBrasile>isFrances:
+    categoriaDefinida = "Brasile";
+    qtdBrasileiro += 1;
+
+print("Categoria Definida   :%s "%categoriaDefinida)
+print("Categoria Verdadeira :%s "%clienteNaoIdentificado['nascionalidade'])
+```
+{% endtab %}
+{% endtabs %}
+
+  Agora só falta mostrar quantos clientes cada nacionalidade possui:
+
+{% tabs %}
+{% tab title="Python" %}
+```python
+# Fluxo principal
+
+listClassificados   = le_arquivo('mediaPorNasci.knn.algoritmo.txt');
+listNaoClassificados = le_arquivo('comandas.knn.algoritmo.txt');
+qtdAmericanos = 0;
+qtdEspanhol = 0;
+qtdFrances = 0;
+qtdBrasileiro = 0;
+for clienteNaoIdentificado in listNaoClassificados:
+    # Codigo da classificação
+    # ~~~~~~~~
+    for pessoaIdentificada in listClassificados:
+        # Codigo para pegar a distancia
+        # ~~~~~~~~
+    # ~~~~~~~~
+print(" Nacionalidade dos clientes :")
+print(" Americanos %i " % qtdAmericanos);
+print(" Espanhois %i " % qtdEspanhol);
+print(" Franceses %i " % qtdFrances);
+print(" Brasileiros %i " % qtdBrasileiro);
+```
+{% endtab %}
+{% endtabs %}
+
+  Vou deixar o código para download:
+
+{% file src="../.gitbook/assets/pythonknn.zip" caption="Algoritmo KNN em Python" %}
 
 
 
