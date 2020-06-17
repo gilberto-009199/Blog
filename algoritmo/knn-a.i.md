@@ -28,7 +28,7 @@ Atenção nesse cenário existem varias variáveis que precisamos considerar, ma
 
 {% file src="../.gitbook/assets/mediapornasci.knn.algoritmo.txt" caption="Scientific Institute of Biology and Agriculture." %}
 
-{% file src="../.gitbook/assets/comandas.knn.algoritmo.txt" caption="Comandas do Restaurante" %}
+{% file src="../.gitbook/assets/comandas.knn.algoritmo.txt" caption="Comandas enviadas pelo cliente" %}
 
   Esta na hora de produzir o código que usara a media do estudo e as comandas para através da distancia euclidiana definir a nacionalidade de cada cliente.
 
@@ -170,6 +170,35 @@ Para os Curiosos e entusiasmados por programação, a função de raiz na maiori
   Começamos lendo os dados nos dois arquivo e adicionando nas nossas listas. para isso vamos criar uma função para ler e montar os dados.
 
 {% tabs %}
+{% tab title="JavaScript" %}
+```javascript
+function le_arquivo(nome){
+   // Lista com os dados pegos linha por linha
+   listDados = [];
+   arquivo = fs.readFileSync(nome,'utf8').split('\n');
+   for(let line of arquivo){
+        // Corta o texto da linha para pegar cada dado
+        carne_vermelha  = line.slice(4,9)   * 1;
+        carne_branca    = line.slice(13,18) * 1;
+        massa           = line.slice(22,27) * 1;
+        fruta           = line.slice(31,36) * 1;
+        vegetais        = line.slice(40,45) * 1;
+        nascionalidade  = line.slice(50,57);
+        // Monta o Cliente e adiciona na lista 
+        listDados.push({  'carnes_vermelhas':carne_vermelha,
+                            'carnes_brancas':carne_branca,
+                            'massas':massa,
+                            'frutas':fruta,
+                            'vegetais':vegetais,
+                            'nascionalidade':nascionalidade
+                            });
+   }
+    // Retorna as informação guardadas na lista
+    return listDados;
+}
+```
+{% endtab %}
+
 {% tab title="Python" %}
 ```python
 def le_arquivo(nome):
@@ -207,6 +236,29 @@ def le_arquivo(nome):
   Vamos criar uma estrutura  de repetição que para pegar cada um dos clientes não identificas e  outro **loop** interno que se em carregara de comparar os dados do cliente não identificado com os dados do estudo.
 
 {% tabs %}
+{% tab title="JavaScript" %}
+```javascript
+// Pegando os dados 
+listClassificados   = le_arquivo('mediaPorNasci.knn.algoritmo.txt');
+listNaoClassificados = le_arquivo('comandas.knn.algoritmo.txt');
+console.log(listClassificados);
+// Variaveis Acumuladoras de cada nacionalidade
+qtdAmericanos = 0;
+qtdEspanhol = 0;
+qtdFrances = 0;
+qtdBrasileiro = 0;
+
+for(let clienteNaoIdentificado of listNaoClassificados){
+    // Codigo para comparar e determinar a classe mais proxima
+    for(let pessoaIdentificada of listClassificados){
+        // Codigo que vai comparar o
+        // ClienteNãoIdentificado com
+        // cada um dos pessoaIdentificada no estudo 
+    }
+}
+```
+{% endtab %}
+
 {% tab title="Python" %}
 ```python
 # Pegando os dados 
@@ -287,13 +339,23 @@ for clienteNaoIdentificado in listNaoClassificados:
 Vamos ordenar a lista:
 
 {% tabs %}
+{% tab title="JavaScript" %}
+```javascript
+    // Hora de ordenar pelos com menor
+    // distancia
+    let funcaoDeOrdenacao = function(a, b){return a['distancia'] - b['distancia']}
+    // Usando o recurso de sort da linguagem
+    listIndexadaPelaDistancia.sort( funcaoDeOrdenacao );
+```
+{% endtab %}
+
 {% tab title="Python" %}
 ```python
-    # Hora de ordenar pelos com menor
-    # distancia
-    funcaoDeOrdenacao= lambda clienteIndexado: clienteIndexado['distancia'];
-    # Usando o recusro de sort da linguagem
-    listIndexadaPelaDistancia.sort(key=funcaoDeOrdenacao)
+    // Hora de ordenar pelos com menor
+    // distancia
+    funcaoDeOrdenacao = function(a, b){ return a['distancia'] - b['distancia'] }
+    // Usando o recurso de sort da linguagem
+    listIndexadaPelaDistancia.sort( funcaoDeOrdenacao );
 ```
 {% endtab %}
 {% endtabs %}
@@ -301,6 +363,15 @@ Vamos ordenar a lista:
   Agora que já temos a relação entre **`clienteNaoIdentificado`** e todas as **`pessoaIdentificada`** , precisamos determinar o quão distante a gente vai considerar para classificação , ao seja, quais das **`pessoaIdentificada`** estão mais próximas para nos ajudar a classificar o **`clienteNaoIdentificado`** , eu decidi escolher os 7 primeiros da lista ordenada.
 
 {% tabs %}
+{% tab title="JavaScript" %}
+```javascript
+K = 7;
+for(let i of listIndexadaPelaDistancia.slice(0, K)){
+    // Codigo que verifica qual nascionalidade é predominate
+}
+```
+{% endtab %}
+
 {% tab title="Python" %}
 ```python
     K = 7;
@@ -313,6 +384,34 @@ Vamos ordenar a lista:
  Agora só falta contar a nacionalidade predominante nesse conjunto de 7 pessoas próximas e teremos nosso classificador.
 
 {% tabs %}
+{% tab title="JavaScript" %}
+```javascript
+K = 7;
+/*
+   Escolhi 7, mas na minha opniao seria melhor
+  pegar uma porcentagem dos classificados como 30% algo assim,
+  quem sabe , afinal eu não sou um experti em algoritmos de 
+  aprendizado supervisionado de maguina 
+*/
+isAmerica = 0;
+isFrances = 0;
+isEspanho = 0;
+isBrasile = 0;
+for(let i of listIndexadaPelaDistancia.slice(0, K)){
+    // Codigo que verifica qual nascionalidade é predominate
+    if (i['nascionalidade'] == "America")
+        isAmerica += 1;
+    else if(i['nascionalidade'] == "Espanho")
+        isEspanho += 1;
+    else if(i['nascionalidade'] == "Frances")
+        isFrances += 1;
+    else if(i['nascionalidade'] == "Brasile")
+        isBrasile += 1;
+    else console.log("Categoria não identificada");
+}
+```
+{% endtab %}
+
 {% tab title="Python" %}
 ```python
     K = 7;
@@ -343,6 +442,33 @@ Vamos ordenar a lista:
   Agora vamos verificar qual é a predominante verificando qual das variáveis acumuladoras e maior que as outras.
 
 {% tabs %}
+{% tab title="JavaScript" %}
+```javascript
+categoriaDefinida = "Indefinida...";
+// IFs apra verificar qual nacionalidade esta mais presente
+if(isAmerica>isEspanho && isAmerica > isFrances && isAmerica> isBrasile)
+{
+    categoriaDefinida = "America";
+    qtdAmericanos += 1;
+}
+else if(isEspanho>isAmerica && isEspanho>isFrances && isEspanho> isBrasile)
+{
+    categoriaDefinida = "Espanho";
+    qtdEspanhol += 1;
+}
+else if(isFrances>isAmerica && isFrances>isEspanho && isFrances> isBrasile)
+{
+    categoriaDefinida = "Frances";
+    qtdFrances += 1;
+}
+else if(isBrasile>isAmerica && isBrasile>isEspanho && isBrasile>isFrances)
+{
+    categoriaDefinida = "Brasile";
+    qtdBrasileiro += 1;
+}
+```
+{% endtab %}
+
 {% tab title="Python" %}
 ```python
 
@@ -370,6 +496,33 @@ print("Categoria Verdadeira :%s "%clienteNaoIdentificado['nascionalidade'])
   Agora só falta mostrar quantos clientes cada nacionalidade possui:
 
 {% tabs %}
+{% tab title="JavaScript" %}
+```javascript
+listClassificados   = le_arquivo('mediaPorNasci.knn.algoritmo.txt');
+listNaoClassificados = le_arquivo('comandas.knn.algoritmo.txt');
+
+qtdAmericanos = 0;
+qtdEspanhol = 0;
+qtdFrances = 0;
+qtdBrasileiro = 0;
+
+for(let clienteNaoIdentificado of listNaoClassificados){
+    // Codigo da classificação
+    // ~~~~~~~~
+    for(let pessoaIdentificada of listClassificados){
+        // Codigo para pegar a distancia
+        // ~~~~~~~~
+    }
+    // ~~~~~~~~
+}
+console.log(" Nacionalidade dos clientes :")
+console.log(" Americanos %i ", qtdAmericanos);
+console.log(" Espanhois %i ", qtdEspanhol);
+console.log(" Franceses %i ", qtdFrances);
+console.log(" Brasileiros %i ", qtdBrasileiro);
+```
+{% endtab %}
+
 {% tab title="Python" %}
 ```python
 # Fluxo principal
@@ -399,6 +552,8 @@ print(" Brasileiros %i " % qtdBrasileiro);
   Vou deixar o código para download:
 
 {% file src="../.gitbook/assets/pythonknn.zip" caption="Algoritmo KNN em Python" %}
+
+{% file src="../.gitbook/assets/javascriptknn.zip" caption="Algoritmo Knn em JavaScript" %}
 
 
 
