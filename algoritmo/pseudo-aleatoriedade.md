@@ -14,7 +14,7 @@
 
 ![grafico do gnuplot para a resolu&#xE7;&#xE3;o de x + y](../.gitbook/assets/pseudoaleatoriedade.png)
 
-  O **algoritmo não determinístico** é um algoritmo cujo as entradas não determinam a saída final do programa por exemplo se eu somar `x + y`  aonde `x = 3` e `y = 4` o resultado será `x + y = 7` , mas e se eu somar `(x + DiaAtual) + (y + HoraAtual)`  aonde `x = 3`  e`y = 4`  o resultado vai variar de hora em hora e de dia em dia não importando qual será a minha entrada em `x` e `y`.
+  O **algoritmo não determinístico** é um algoritmo cujo as entradas não determinam a saída final do programa por exemplo se eu somar `x + y`  aonde `x = 3` e `y = 4` o resultado será `x + y = 7` , mas e se eu somar `(x + (DiaAtual* 1.5)) + (y + (HoraAtual*2.2))`  aonde `x = 3`  e`y = 4`  o resultado vai variar de hora em hora e de dia em dia não importando qual será a minha entrada em `x` e `y`.
 
 #### Implementação do UUID v4 
 
