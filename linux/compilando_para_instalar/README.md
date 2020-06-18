@@ -124,7 +124,7 @@ Opções utilizadas:
 * --target=i686-elf                          \#Arquitetura 
 * --prefix="$HOME/build"             \# Local da instalação
 * --enable-languages=c,c++        \# Linguagens que serão suportadas 
-* --without-headers                      \# diz ao [GCC](https://wiki.osdev.org/GCC) para não confiar em nenhuma biblioteca C \(padrão ou tempo de execução\) presente já que sera um compilador cruzado
+* --without-headers                       \# diz ao [GCC](https://wiki.osdev.org/GCC) para não confiar em nenhuma biblioteca C \(padrão ou tempo de execução\) presente já que sera um compilador cruzado
 
 Agora vamos compilar e mover para o diretório de instalação, Alias isso pode demorar bastante.
 
