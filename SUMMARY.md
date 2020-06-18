@@ -6,7 +6,6 @@
 
 * [Algoritmo KNN](algoritmo/knn-a.i.md)
 * [Pseudo Aleatoriedade](algoritmo/pseudo-aleatoriedade.md)
-* [Dijkstra](algoritmo/dijkstra.md)
 
 ## Linux
 
