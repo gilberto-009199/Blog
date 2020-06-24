@@ -229,6 +229,18 @@ def le_arquivo(nome):
     return listDados;
 ```
 {% endtab %}
+
+{% tab title="Java" %}
+```
+
+```
+{% endtab %}
+
+{% tab title="C++" %}
+```
+
+```
+{% endtab %}
 {% endtabs %}
 
   Agora que já podemos ler vamos pegar os dados do estudo que esta no arquivo de nome`mediaPorNasci.knn.algoritmo.txt` e os dados das comandas não identificadas no arquivo `comandas.knn.algoritmo.txt` , e começar a comparação.
