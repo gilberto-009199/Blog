@@ -353,11 +353,13 @@ Vamos ordenar a lista:
 {% tabs %}
 {% tab title="JavaScript" %}
 ```javascript
-    // Hora de ordenar pelos com menor
-    // distancia
-    let funcaoDeOrdenacao = function(a, b){return a['distancia'] - b['distancia']}
-    // Usando o recurso de sort da linguagem
-    listIndexadaPelaDistancia.sort( funcaoDeOrdenacao );
+// Hora de ordenar pelos com menor
+// distancia
+let funcaoDeOrdenacao = function(a, b){
+    return a['distancia'] - b['distancia']
+   }
+// Usando o recurso de sort da linguagem
+listIndexadaPelaDistancia.sort( funcaoDeOrdenacao );
 ```
 {% endtab %}
 
