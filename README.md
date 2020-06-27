@@ -1,6 +1,6 @@
 # Home
 
-Esse blog e a meramente um local aonde postos coisas para consulta rápida, e talvez ate para a consulta de terceiros.
+Esse [blog](https://gilberto-tec.gitbook.io/blog/) e a meramente um local aonde postos coisas para consulta rápida, e talvez ate para a consulta de terceiros.
 
 Mas embora esteja só no incio, eu compartinho com vocês esse pensamento:
 

@@ -9,6 +9,7 @@
 
 ## Linux
 
+* [Basíco](linux/linux.md)
 * [Script](linux/script.md)
 * [Compilar Programas](linux/compilando_para_instalar/README.md)
   * [Install Linux Program](linux/compilando_para_instalar/basic.md)
