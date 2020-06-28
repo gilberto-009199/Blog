@@ -302,7 +302,7 @@ for clienteNaoIdentificado in listNaoClassificados:
 | **`clienteNaoIdentificado`** |  Cliente da comanda que ainda não foi definido de qual nacionalidade ele pertence! |
 | **`pessoaIdentificada`** |   Pessoa do Estudo com a media de consumo por refeição e sua nacionalidade. |
 
-  Bem agora que já pegamos cada `clienteNaoIdentificado`  e cada  `pessoaIdentificada` do estudo, vamos precisar comparar cada um dos `clienteNaoIdentificado` com todas as   `pessoaIdentificada` e guardar a distancia como mostrada na imagem abaixo.
+  Bem agora que já pegamos cada `clienteNaoIdentificado`  e cada  `pessoaIdentificada` do estudo, vamos precisar comparar cada um dos `clienteNaoIdentificado` com todas as   `pessoaIdentificada` e guardar a distancia como mostrada nas imagens abaixo.
 
 ![Imagem das compara&#xE7;&#xF5;es](../.gitbook/assets/imagemcomparacoes.png)
 
