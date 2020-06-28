@@ -328,7 +328,7 @@ List<Cliente> listClassificados = knn
                             .le_arquivo("mediaPorNasci.knn.algoritmo.txt");
 List<Cliente> listNaoClassificados = knn
                             .le_arquivo("comandas.knn.algoritmo.txt");
-
+//import static java.lang.System.out;
 out.println(listClassificados);
 // Variaveis Acumuladoras de cada nacionalidade
 int qtdAmericanos = 0;
@@ -416,6 +416,27 @@ for clienteNaoIdentificado in listNaoClassificados:
                   'distancia':distancia,
                   'nascionalidade': pessoaIdentificada['nascionalidade']
                  });
+```
+{% endtab %}
+
+{% tab title="Java" %}
+```java
+for(Cliente clienteNaoIdentificado : listNaoClassificados){
+	// Lista que ira ordenarar as pessoa mais proximos dele 
+  Map<Double,String> listIndexadaPelaDistancia = new HashMap<Double,String>();
+
+	for(Cliente pessoaIdentificada : listClassificados){
+	 	// Comparando e pegando a distancia
+	  Double distancia = getEuclidiana(  clienteNaoIdentificado,
+																			 pessoaIdentificada
+																		);
+	  // Colocando na lista de ordenacao
+	  listIndexadaPelaDistancia.put(  distancia,
+																		pessoaIdentificada.nascionalidade
+																	);
+  }
+  
+}
 ```
 {% endtab %}
 {% endtabs %}
