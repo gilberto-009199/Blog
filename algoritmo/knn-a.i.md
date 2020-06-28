@@ -32,7 +32,7 @@ Atenção nesse cenário existem varias variáveis que precisamos considerar, ma
 
   Esta na hora de produzir o código que usara a media do estudo e as comandas para através da distancia euclidiana definir a nacionalidade de cada cliente.
 
-  Para ser mais abrangente em termos de linguagem eu farei o Script em Javascript, Python e JAVA, para assegurar que a maioria compreenda em sua linguagem mais familiar.
+  Para ser mais abrangente em termos de linguagem eu farei o Algoritmo em Javascript, Python e JAVA, para assegurar que a maioria compreenda em sua linguagem mais familiar.
 
   Antes de procedermos saiba que as descrições podem estar um tanto complexas para falar a verdade, então não exite em pegar uma café e/ou ler uma 2° vez.
 
