@@ -318,6 +318,35 @@ for clienteNaoIdentificado in listNaoClassificados:
         
 ```
 {% endtab %}
+
+{% tab title="Java" %}
+```
+Main knn = new Main();
+
+// Pegando os dados
+List<Cliente> listClassificados = knn
+                            .le_arquivo("mediaPorNasci.knn.algoritmo.txt");
+List<Cliente> listNaoClassificados = knn
+                            .le_arquivo("comandas.knn.algoritmo.txt");
+
+
+out.println(listClassificados);
+// Variaveis Acumuladoras de cada nacionalidade
+int qtdAmericanos = 0;
+int qtdEspanhol = 0;
+int qtdFrances = 0;
+int qtdBrasileiro = 0;
+
+for(Cliente clienteNaoIdentificado : listNaoClassificados){
+    // Codigo para comparar e determinar a classe mais proxima
+    for(Cliente pessoaIdentificada : listClassificados){
+        // Codigo que vai comparar o
+        // ClienteNãoIdentificado com
+        // cada um dos pessoaIdentificada no estudo 
+    }
+}
+```
+{% endtab %}
 {% endtabs %}
 
   Para nos ajuda a entender vamos resumir nossas variáveis ate agora:
@@ -358,6 +387,23 @@ for clienteNaoIdentificado in listNaoClassificados:
   Então vamos implementar criando uma lista chamada `listIndexadaPelaDistancia` que conterá a distancia que cada pessoas já identificada estão do cliente ainda não identificado. E depois vamos ordenar a lista para que tenhamos o mais próximo na 1° posição, o segundo na 2° posição e assim por diante deixando o  mais distante na ultima posição.
 
 {% tabs %}
+{% tab title="JavaScript" %}
+```javascript
+for(let clienteNaoIdentificado of listNaoClassificados){
+    // Lista que ira ordenarar as pessoa mais proximos dele 
+    listIndexadaPelaDistancia = [];
+    for(let pessoaIdentificada of listClassificados){
+        // Comparando e pegando a distancia
+        distancia = getEuclidiana(clienteNaoIdentificado,pessoaIdentificada)
+        // Colocando na lista de ordenacao
+        listIndexadaPelaDistancia.push({
+                  'distancia':distancia,
+                  'nascionalidade': pessoaIdentificada['nascionalidade']
+                 });
+    }
+```
+{% endtab %}
+
 {% tab title="Python" %}
 ```python
 for clienteNaoIdentificado in listNaoClassificados:
