@@ -24,7 +24,7 @@ Atenção nesse cenário existem varias variáveis que precisamos considerar, ma
 
 ## Comece bonitão! Go Horse!
 
-  Tendo agora um arquivo com a media de consumo de cada nacionalidade em gramas e a quantidade consumida, construa um programa que leia o arquivo com as medias de cada nacionalidade e as comandas e faça o cruzamento dos dados devolvendo a nacionalidade com mais clientes.
+  Tendo agora um arquivo com a media de consumo de cada nacionalidade em gramas e a quantidade consumida por cliente, construa um programa que leia o arquivo com as medias de cada nacionalidade e as comandas e faça o cruzamento dos dados devolvendo a nacionalidade com mais clientes.
 
 {% file src="../.gitbook/assets/mediapornasci.knn.algoritmo.txt" caption="Scientific Institute of Biology and Agriculture." %}
 
