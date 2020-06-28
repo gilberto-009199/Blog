@@ -8,7 +8,7 @@
 
   Dentro de uma aplicação e extremamente comum usamos identificadores para separar usuários e separar qual cliente\(Computador\) esta logado e usando qual recurso. Para isso e normal usarmos tokens \(Código de Identificação\) ou as mais antigas SessionID\( Código de Identificação de sessão\). 
 
-  Mas o problema é que ambos são códigos gerados por um algoritmo no computador, logo se alguém calcula-se de quanto em quanto os códigos gerados pulam, seria possível um invasor   [extrapolar](https://www.dicio.com.br/extrapolar/) os próximos códigos e se passar por um cliente autenticado , isso foi chamado de [Sequestro de Sessão](https://en.wikipedia.org/wiki/Session_hijacking)  para tentar impedir isso nós sempre usamos e aprimoramos algoritmos não determinísticos para estabelecer um grau de entropia que dificulte previsões.
+  Mas o problema é que ambos são códigos gerados por um algoritmo no computador, logo se alguém calcula-se de quanto em quanto os códigos gerados pulam, seria possível um invasor   extrapolar os próximos códigos e se passar por um cliente autenticado , isso foi chamado de [Sequestro de Sessão](https://en.wikipedia.org/wiki/Session_hijacking)  para tentar impedir isso nós sempre usamos e aprimoramos algoritmos não determinísticos para estabelecer um grau de entropia que dificulte previsões.
 
 
 
