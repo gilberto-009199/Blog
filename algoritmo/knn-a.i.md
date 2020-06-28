@@ -423,7 +423,7 @@ for clienteNaoIdentificado in listNaoClassificados:
 ```java
 for(Cliente clienteNaoIdentificado : listNaoClassificados){
 	// Lista que ira ordenarar as pessoa mais proximos dele 
-  Map<Double,String> listIndexadaPelaDistancia = new HashMap<Double,String>();
+  Map<Double,String> listIndexadaPelaDistancia = new TreeMap<Double,String>();
 
 	for(Cliente pessoaIdentificada : listClassificados){
 	 	// Comparando e pegando a distancia
@@ -458,11 +458,21 @@ listIndexadaPelaDistancia.sort( funcaoDeOrdenacao );
 
 {% tab title="Python" %}
 ```python
-    // Hora de ordenar pelos com menor
-    // distancia
-    funcaoDeOrdenacao = function(a, b){ return a['distancia'] - b['distancia'] }
-    // Usando o recurso de sort da linguagem
-    listIndexadaPelaDistancia.sort( funcaoDeOrdenacao );
+# Hora de ordenar pelos com menor
+# distancia
+funcaoDeOrdenacao = lambda clienteIndexado: clienteIndexado['distancia'];
+# Usando o recusro de sort da linguagem
+listIndexadaPelaDistancia.sort(key=funcaoDeOrdenacao)
+```
+{% endtab %}
+
+{% tab title="Java" %}
+```java
+// Como usamos o TreeMap nossa lista se ordena pela função
+// .keySet()
+// set = lista ordenada
+Set<Double> set = listIndexadaPelaDistancia.keySet();
+
 ```
 {% endtab %}
 {% endtabs %}
@@ -484,6 +494,18 @@ for(let i of listIndexadaPelaDistancia.slice(0, K)){
     K = 7;
     for i in listIndexadaPelaDistancia[:K]:
         # Codigo que verifica qual nascionalidade é predominate
+```
+{% endtab %}
+
+{% tab title="Java" %}
+```java
+int K = 7;
+int contador = 0;
+for(Double key : listIndexadaPelaDistancia.keySet()) {
+  // Codigo que verifica qual nascionalidade é predominate
+	if(contador < K)contador++;
+	else break;
+}
 ```
 {% endtab %}
 {% endtabs %}
@@ -521,27 +543,61 @@ for(let i of listIndexadaPelaDistancia.slice(0, K)){
 
 {% tab title="Python" %}
 ```python
-    K = 7;
-    # Escolhi 7, mas na minha opniao seria melhor
-    # pegar uma porcentagem dos classificados como 30% algo assim,
-    # quem sabe , afinal eu não sou um experti em algoritmos de 
-    # aprendizado supervisionado de maguina
-    isAmerica = 0;
-    isFrances = 0;
-    isEspanho = 0;
-    isBrasile = 0;
-    for i in listIndexadaPelaDistancia[:K]:
-        
-        if i['nascionalidade'] == "America":
-            isAmerica += 1;
-        elif i['nascionalidade'] == "Espanho":
-            isEspanho += 1;
-        elif i['nascionalidade'] == "Frances":
-            isFrances += 1;
-        elif i['nascionalidade'] == "Brasile":
-            isBrasile += 1;
-        else:
-            print("Categoria não identificada")
+K = 7;
+# Escolhi 7, mas na minha opniao seria melhor
+# pegar uma porcentagem dos classificados como 30% algo assim,
+# quem sabe , afinal eu não sou um experti em algoritmos de 
+# aprendizado supervisionado de maguina
+isAmerica = 0;
+isFrances = 0;
+isEspanho = 0;
+isBrasile = 0;
+for i in listIndexadaPelaDistancia[:K]:
+    
+    if i['nascionalidade'] == "America":
+        isAmerica += 1;
+    elif i['nascionalidade'] == "Espanho":
+        isEspanho += 1;
+    elif i['nascionalidade'] == "Frances":
+        isFrances += 1;
+    elif i['nascionalidade'] == "Brasile":
+        isBrasile += 1;
+    else:
+        print("Categoria não identificada")
+```
+{% endtab %}
+
+{% tab title="Java" %}
+```java
+int K = 7;
+int contador = 0;
+/*
+   Escolhi 7, mas na minha opniao seria melhor
+  pegar uma porcentagem dos classificados como 30% 
+  algo assim,
+  quem sabe , afinal eu não sou um experti em 
+  algoritmos de 
+  aprendizado supervisionado de maguina 
+*/
+int isAmerica = 0;
+int isFrances = 0;
+int isEspanho = 0;
+int isBrasile = 0;
+for(Double key : listIndexadaPelaDistancia.keySet()) {
+	// Codigo que verifica qual nascionalidade é predominate
+	if (listIndexadaPelaDistancia.get(key).equals("America"))
+        isAmerica += 1;
+  else if(listIndexadaPelaDistancia.get(key).equals("Espanho"))
+        isEspanho += 1;
+  else if(listIndexadaPelaDistancia.get(key).equals("Frances"))
+        isFrances += 1;
+  else if(listIndexadaPelaDistancia.get(key).equals("Brasile"))
+        isBrasile += 1;
+  else out.println("Categoria não identificada");
+    	
+	if(contador < K)contador++;
+	else break;
+}
 ```
 {% endtab %}
 {% endtabs %}
@@ -598,6 +654,37 @@ print("Categoria Definida   :%s "%categoriaDefinida)
 print("Categoria Verdadeira :%s "%clienteNaoIdentificado['nascionalidade'])
 ```
 {% endtab %}
+
+{% tab title="Java" %}
+```java
+String categoriaDefinida = "Indefinida...";
+// IFs apra verificar qual nacionalidade esta mais presente
+if(isAmerica>isEspanho && isAmerica > isFrances && isAmerica> isBrasile)
+{
+    categoriaDefinida = "America";
+    qtdAmericanos += 1;
+}
+else if(isEspanho>isAmerica && isEspanho>isFrances && isEspanho> isBrasile)
+{
+    categoriaDefinida = "Espanho";
+    qtdEspanhol += 1;
+}
+else if(isFrances>isAmerica && isFrances>isEspanho && isFrances> isBrasile)
+{
+    categoriaDefinida = "Frances";
+    qtdFrances += 1;
+}
+else if(isBrasile>isAmerica && isBrasile>isEspanho && isBrasile>isFrances)
+{
+    categoriaDefinida = "Brasile";
+    qtdBrasileiro += 1;
+}
+
+out.println("Categoria Definida   : " + categoriaDefinida);
+out.println("Categoria Verdadeira : " + clienteNaoIdentificado
+                                         .nascionalidade);
+```
+{% endtab %}
 {% endtabs %}
 
   Agora só falta mostrar quantos clientes cada nacionalidade possui:
@@ -623,10 +710,10 @@ for(let clienteNaoIdentificado of listNaoClassificados){
     // ~~~~~~~~
 }
 console.log(" Nacionalidade dos clientes :")
-console.log(" Americanos %i ", qtdAmericanos);
-console.log(" Espanhois %i ", qtdEspanhol);
-console.log(" Franceses %i ", qtdFrances);
-console.log(" Brasileiros %i ", qtdBrasileiro);
+console.log(" Americanos  ", qtdAmericanos);
+console.log(" Espanhois ", qtdEspanhol);
+console.log(" Franceses ", qtdFrances);
+console.log(" Brasileiros ", qtdBrasileiro);
 ```
 {% endtab %}
 
@@ -654,6 +741,40 @@ print(" Franceses %i " % qtdFrances);
 print(" Brasileiros %i " % qtdBrasileiro);
 ```
 {% endtab %}
+
+{% tab title="Java" %}
+```java
+Main knn = new Main();
+// Pegando os dados 
+List<Cliente> listClassificados = knn
+          .le_arquivo("mediaPorNasci.knn.algoritmo.txt");
+List<Cliente> listNaoClassificados = knn
+          .le_arquivo("comandas.knn.algoritmo.txt");
+
+// Variaveis Acumuladoras de cada nacionalidade
+int qtdAmericanos = 0;
+int qtdEspanhol = 0;
+int qtdFrances = 0;
+int qtdBrasileiro = 0;
+
+for(Cliente clienteNaoIdentificado:listNaoClassificados){
+	// Codigo da classificação
+  // ~~~~~~~~
+  for(Cliente pessoaIdentificada : listClassificados){
+   // Codigo para pegar a distancia
+   // ~~~~~~~~
+  }
+  // ~~~~~~~~
+
+}
+
+out.println(" Nacionalidade dos clientes :");
+out.println(" Americanos "+ qtdAmericanos);
+out.println(" Espanhois  "+ qtdEspanhol);
+out.println(" Franceses  "+ qtdFrances);
+out.println(" Brasileiros  "+ qtdBrasileiro);
+```
+{% endtab %}
 {% endtabs %}
 
   Vou deixar o código para download:
@@ -662,5 +783,5 @@ print(" Brasileiros %i " % qtdBrasileiro);
 
 {% file src="../.gitbook/assets/javascriptknn.zip" caption="Algoritmo Knn em JavaScript" %}
 
-
+{% file src="../.gitbook/assets/javaknn.zip" caption="Algoritmo Knn em Java" %}
 
