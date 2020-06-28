@@ -9,7 +9,10 @@
 
 ## Linux
 
-* [Basíco](linux/linux.md)
+* [Basíco](linux/linux/README.md)
+  * [Arquivos e diretorios](linux/linux/arquivos-e-diretorios.md)
+  * [Empacotamento e Compressão](linux/linux/empacotamento-e-compressao.md)
+  * [Arquivos binarios](linux/linux/arquivos-binarios.md)
 * [Script](linux/script.md)
 * [Compilar Programas](linux/compilando_para_instalar/README.md)
   * [Install Linux Program](linux/compilando_para_instalar/basic.md)
