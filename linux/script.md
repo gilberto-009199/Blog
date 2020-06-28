@@ -89,7 +89,7 @@ Então para resolver isso vamos colorir a nossa mensagem deixando :
 | Texto Com informações | Roxo Claro | \e\[1;31m &lt;TEXTO&gt; \e\[0m |
 | Comandos | Vermelho | \e\[1;35m &lt;TEXTO&gt; \e\[0m |
 
-Bem agora que já temos o nosso estilo, vamos utilizar `echo -e` para indicar o comando `echo` que ele deve permitir uso de cores e utilizar o `\e[<{tipoTexto}> ; <{COR}>m <{Texto}> \e[0m` , para saber mais sobre as cores utilize esse link do blog do [remontinho](https://blog.remontti.com.br/141) e do [vivaoLinux](https://www.vivaolinux.com.br/artigo/Formatando-o-bash-com-cores-e-efeitos).
+Bem agora que já temos o nosso estilo, vamos utilizar `echo -e` para indicar o comando `echo` que ele deve permitir uso de cores e utilizar o `\e[<{tipoTexto}> ; <{COR}>m <{Texto}> \e[0m` , para saber mais sobre as cores utilize esse link do blog do [remontinho](https://blog.remontti.com.br/141) e do [VivaoLinux](https://www.vivaolinux.com.br/artigo/Formatando-o-bash-com-cores-e-efeitos).
 
 Como resultado o nosso script `~/MyScript` fica assim:
 
