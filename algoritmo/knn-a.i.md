@@ -231,7 +231,7 @@ def le_arquivo(nome):
 {% endtab %}
 
 {% tab title="Java" %}
-```
+```java
 public List<Cliente> le_arquivo(String nome){
 	// Lista com os dados pegos linha por linha
   List<Cliente> listDados = new ArrayList<Cliente>();
@@ -320,7 +320,7 @@ for clienteNaoIdentificado in listNaoClassificados:
 {% endtab %}
 
 {% tab title="Java" %}
-```
+```java
 Main knn = new Main();
 
 // Pegando os dados
@@ -328,7 +328,6 @@ List<Cliente> listClassificados = knn
                             .le_arquivo("mediaPorNasci.knn.algoritmo.txt");
 List<Cliente> listNaoClassificados = knn
                             .le_arquivo("comandas.knn.algoritmo.txt");
-
 
 out.println(listClassificados);
 // Variaveis Acumuladoras de cada nacionalidade
