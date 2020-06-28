@@ -38,7 +38,7 @@ Atenção nesse cenário existem varias variáveis que precisamos considerar, ma
 
 ### Função da Distancia Euclidiana
 
-  Para pensar em distancia nos termos da distancia euclidiana, pense que a distancia de uma entidade para outra nada mais é do que quantas diferenças uma entidade possui em relação a outra entidade.
+  Para pensar em distancia nos termos da distancia euclidiana, pense que a distancia de uma entidade\(Cliente\) para outra nada mais é do que quantas diferenças uma entidade\(Cliente\) possui em relação a outra entidade\(Cliente\).
 
 * Pegar a diferença entre as propriedades das entidades
 
