@@ -79,7 +79,7 @@ Agora, na próxima vez que o usuário entrar ele verá:
 
 ![Mensagem de entrada](../.gitbook/assets/semcor.png)
 
-Mas esta meio feio, não que isso seja importante, mas se o nosso usuário não ler ou não prestar atenção no que é importante como o comando work.
+Mas esta meio feio, não que isso seja importante, mas se o nosso usuário não ler ou não prestar atenção no que é importante como o comando work, isso não vai servir para nada.
 
 Então para resolver isso vamos colorir a nossa mensagem deixando :
 
