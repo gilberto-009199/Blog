@@ -161,7 +161,7 @@ Para os Curiosos e entusiasmados por programação, a função de raiz na maiori
 
 ### Função da Classificação
 
-  Dentro dessa função vamos comparar o cliente que precisa ser identificado com os clientes que já sabemos a nacionalidade.
+  Dentro dessa função vamos comparar o cliente que precisa ser identificado com as pessoas que já sabemos a nacionalidade pelo estudo que consultamos.
 
  Depois criar uma vetor que indexe as relações de distancia entre as entidades cliente não identificadas\(Comanda\) para os clientes do estudo.
 
