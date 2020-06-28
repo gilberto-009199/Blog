@@ -232,7 +232,34 @@ def le_arquivo(nome):
 
 {% tab title="Java" %}
 ```
+public List<Cliente> le_arquivo(String nome){
+	// Lista com os dados pegos linha por linha
+  List<Cliente> listDados = new ArrayList<Cliente>();
+  
+  try {
+		   
+	  BufferedReader arquivo = new BufferedReader(new  FileReader(nome));
+	  String line;
+	   
+    while ((line = arquivo.readLine()) != null) {
+ 	   System.out.println(linha);
+		 Cliente client = new Cliente(); 
+			    
+     client.carnes_vermelhas = Float.parseFloat(line.substring( 4 , 9 ));
+     client.carnes_brancas   = Float.parseFloat(line.substring( 13 , 18 ));
+     client.massas           = Float.parseFloat(line.substring( 22 , 27 ));
+     client.frutas           = Float.parseFloat(line.substring( 31 , 36 ));
+     client.vegetais         = Float.parseFloat(line.substring( 40 , 45 ));
+     client.nascionalidade   = line.substring( 50 , 57 );
 
+		 listDados.add(client);
+    }
+  } catch (IOException e) {
+	  	e.printStackTrace();
+	}
+
+  return listDados;
+}
 ```
 {% endtab %}
 
