@@ -12,9 +12,9 @@ description: >-
 
 ![](../.gitbook/assets/imagemdosdados.png)
 
-  Estamos em um ilustre restaurante Italiano dentro do Aeroporto Internacional John F. Kennedy na cidade de New York, nosso cliente possui um clientela internacional bastante variada sendo composta por Americanos, Brasileiros, Espanhóis e Franceses. O nosso cliente deseja abrir uma filial, mas não sabe em qual nação seu Cardápio Italiano sera mais apreciado.
+  Estamos em um ilustre restaurante Italiano dentro do Aeroporto Internacional John F. Kennedy na cidade de New York, nosso cliente possui um clientela internacional bastante variada sendo composta por Americanos, Brasileiros, Espanhóis e Franceses. O nosso cliente deseja abrir uma filial, mas não sabe em qual nação seu Cardápio Italiano sera mais apreciado. Seu trabalho será identificar qual pais retem o maior numero de clientes.
 
-  Para auxilia lo nosso cliente te enviou as comandas de 5 dias de trabalho com a respectiva quantidade em gramas de Carne vermelha , Carne Branca , Massas, Frutas e Vegetais consumidos por cliente .
+  Para auxilia lo nosso cliente te enviou as comandas de 5 dias de trabalho com a respectiva quantidade em gramas de Carne vermelha , Carne Branca , Massas, Frutas e Vegetais consumidos por cliente.
 
 {% hint style="warning" %}
 Atenção nesse cenário existem varias variáveis que precisamos considerar, mas não vamos abordar essas questões, para facilitar a implementação do algoritmo. Além é claro que nosso cliente poderia simplesmente perguntar ao cliente qual sua nacionalidade.
@@ -24,7 +24,7 @@ Atenção nesse cenário existem varias variáveis que precisamos considerar, ma
 
 ## Comece bonitão! Go Horse!
 
-  Tendo agora um arquivo com a media de consumo de cada nacionalidade em gramas e a quantidade consumida por cliente, construa um programa que leia o arquivo com as medias de cada nacionalidade e as comandas e faça o cruzamento dos dados devolvendo a nacionalidade com mais clientes.
+  Tendo agora um arquivo com a media de consumo de cada nacionalidade em gramas e a quantidade consumida por cliente, construa um programa que leia o arquivo com as medias de cada nacionalidade e as comandas e faça o cruzamento dos dados devolvendo a nacionalidade com mais clientes para ajudar nosso patrão a definir a filial.
 
 {% file src="../.gitbook/assets/mediapornasci.knn.algoritmo.txt" caption="Scientific Institute of Biology and Agriculture." %}
 
