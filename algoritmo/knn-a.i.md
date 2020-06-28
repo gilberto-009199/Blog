@@ -306,7 +306,7 @@ for clienteNaoIdentificado in listNaoClassificados:
 
 ![Imagem das compara&#xE7;&#xF5;es](../.gitbook/assets/imagemcomparacoes.png)
 
-  Case o nosso `clienteNaoIdentificado` seja:
+  Caso nosso `clienteNaoIdentificado` seja:
 
 * Americano 
 
