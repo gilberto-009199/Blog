@@ -18,12 +18,6 @@ O diretório `/etc` originalmente significava "etc" e/ou "outros" na documentaç
 
   Arquivos de Configuração do sistema.
 
-#### /etc/opt -
-
-#### /etc/skel -
-
-#### /etc/X11 -
-
 ### /opt - 
 
 ### /srv - 
