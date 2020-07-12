@@ -16,6 +16,8 @@ Em desenvolvimento
 O diretório `/etc` originalmente significava "etc" e/ou "outros" na documentação inicial do Bell Labs e costumava conter arquivos que não pertenciam a nenhum local. Nas distribuições modernas do Linux, o diretório `/etc` geralmente contém arquivos de configuração estática, conforme definido pelo File Hierarchy Standard \(ou "FHS"\).
 {% endhint %}
 
+  Arquivos de Configuração 
+
 #### /etc/opt -
 
 #### /etc/skel -
@@ -55,6 +57,10 @@ O diretório `/etc` originalmente significava "etc" e/ou "outros" na documentaç
 #### /media - 
 
 ### /home - 
+
+### /home/bob/
+
+#### /home/bob/.local
 
 ### /root - 
 
