@@ -52,7 +52,7 @@ O diretório `/etc` originalmente significava "etc" e/ou "outros" na documentaç
 
 ### /home - 
 
-### /home/bob/
+#### /home/bob/
 
 #### /home/bob/.local
 
