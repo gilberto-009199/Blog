@@ -24,3 +24,10 @@
 
 * [Torrent Client](java/torrent-client.md)
 
+## Matematica
+
+* [Basico](matematica/basico.md)
+* [Algebra Linear](matematica/algebra-linear/README.md)
+  * [Pontos e Retas](matematica/algebra-linear/pontos-e-retas.md)
+  * [Poligonos](matematica/algebra-linear/poligonos.md)
+
