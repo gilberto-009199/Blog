@@ -1,7 +1,5 @@
 ---
-description: >-
-  Esse algoritmo e usado no aprendizado de maquina com aprendizado
-  supervisionado.
+description: Esse algoritmo e usado no aprendizado de maquina supervisionado.
 ---
 
 # Algoritmo KNN
