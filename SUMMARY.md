@@ -22,7 +22,9 @@
 
 ## Java
 
-* [Torrent Client](java/torrent-client.md)
+* [Torrent Client](java/torrent-client/README.md)
+  * [Implementação do Bencode](java/torrent-client/implementacao-do-bencode.md)
+  * [UDP usando Datagramas](java/torrent-client/udp-usando-datagramas.md)
 
 ## Matematica
 
