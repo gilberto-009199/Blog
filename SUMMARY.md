@@ -33,7 +33,3 @@
   * [Pontos e Retas](matematica/algebra-linear/pontos-e-retas.md)
   * [Poligonos](matematica/algebra-linear/poligonos.md)
 
----
-
-* [dd](untitled.md)
-
