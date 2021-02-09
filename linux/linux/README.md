@@ -38,9 +38,15 @@ O diretório `/etc` originalmente significava "etc" e/ou "outros" na documentaç
 
 #### /usr/local - 
 
-#### /usr/src -
+#### **/usr/src -**
 
-#### /boot - 
+#### **/usr/share -**
+
+#### **/usr/share/doc -**
+
+#### **/usr/share/application -**
+
+#### /boot - contém os arquivos para inicializar o computador.
 
 #### /tmp - 
 
