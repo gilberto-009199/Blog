@@ -25,5 +25,18 @@ Esse artigo ainda esta sendo criado aguarde, mas ara aqueles com mais interesse 
 
    Vamos começar pelas entidades\(Modelos\) dentro da especificação _bencoding metainfo files_, _trackers_, _peer protocol_ e _peer messages_.
 
-  Vamos começar com o 
+  Vamos começar com as estruturas de dados dos _trackers nessa estruruta será guardado  a url necessario para a conexão com um servidor que anunciara a nossa presença  pela rede tor._
+
+#### _Trackers\(Rastreadores\)_
+
+    _Essa entidade vai conter os seguintes atributos:_
+
+| Atributo | Tipo | Descrição |
+| :--- | :--- | :--- |
+| info\_hash |  |  |
+| peer\_id |  |  |
+| uploaded |  |  |
+| downloaded |  |  |
+| compact |  |  |
+| left |  |  |
 
