@@ -10,7 +10,7 @@ As aplicações muitas vezes vão precisar executar operações que não estão 
 
 ## Para solucionar isso?
 
-Alguns desenvolvedores preferem usar suas línguas nativas como javascript, java, php e etc, para criar as rotinas necessárias, mas como sou um usuário de Debian e Manjaro prefiro utilizar o Bash, pois ele já possui um serie de ferramentas já implementadas dentro do sistema operacional, além de ser bem mais fácil e rápido codificar programas que operem com scripts.
+Alguns desenvolvedores preferem usar suas linguagens como javascript, java, php e etc, para criar as rotinas e tarefas necessárias, mas como sou um usuário de Debian e Manjaro prefiro utilizar o Bash, pois ele pode usar as ferramentas já implementadas dentro do sistema operacional, além de ser bem mais fácil e rápido codificar programas que realizam tarefas dentro da maguina.
 
 ### Montando o cenário
 
