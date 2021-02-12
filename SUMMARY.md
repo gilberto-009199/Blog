@@ -14,6 +14,8 @@
   * [Empacotamento e Compressão](linux/linux/empacotamento-e-compressao.md)
   * [Arquivos binarios](linux/linux/arquivos-binarios.md)
 * [Script](linux/script.md)
+* [Avançado](linux/avancado/README.md)
+  * [Desempenho e depuração \(Strace, Ftrace e etc\)](linux/avancado/desempenho-e-depuracao-strace-ftrace-e-etc.md)
 * [Compilar Programas](linux/compilando_para_instalar/README.md)
   * [Install Linux Program](linux/compilando_para_instalar/basic.md)
   * [Programas Compilados](linux/compilando_para_instalar/repository/README.md)
