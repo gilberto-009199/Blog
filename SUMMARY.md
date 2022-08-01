@@ -15,15 +15,16 @@
   * [Arquivos binarios](linux/linux/arquivos-binarios.md)
 * [Script](linux/script.md)
 * [Avançado](linux/avancado/README.md)
-  * [Desempenho e depuração \(Strace, Ftrace e etc\)](linux/avancado/desempenho-e-depuracao-strace-ftrace-e-etc.md)
-* [Compilar Programas](linux/compilando_para_instalar/README.md)
-  * [Install Linux Program](linux/compilando_para_instalar/basic.md)
-  * [Programas Compilados](linux/compilando_para_instalar/repository/README.md)
-    * [DBeaver](linux/compilando_para_instalar/repository/dbeaver.md)
-    * [VPCS](linux/compilando_para_instalar/repository/vpcs.md)
+  * [Desempenho e depuração (Strace, Ftrace e etc)](linux/avancado/desempenho-e-depuracao-strace-ftrace-e-etc.md)
+* [Compilar Programas](linux/compilando\_para\_instalar/README.md)
+  * [Install Linux Program](linux/compilando\_para\_instalar/basic.md)
+  * [Programas Compilados](linux/compilando\_para\_instalar/repository/README.md)
+    * [DBeaver](linux/compilando\_para\_instalar/repository/dbeaver.md)
+    * [VPCS](linux/compilando\_para\_instalar/repository/vpcs.md)
 
 ## Java
 
+* [Reconhecimento de Imagem](java/reconhecimento-de-imagem.md)
 * [Torrent Client](java/torrent-client/README.md)
   * [Implementação do Bencode](java/torrent-client/implementacao-do-bencode.md)
   * [UDP usando Datagramas](java/torrent-client/udp-usando-datagramas.md)
@@ -34,4 +35,3 @@
 * [Algebra Linear](matematica/algebra-linear/README.md)
   * [Pontos e Retas](matematica/algebra-linear/pontos-e-retas.md)
   * [Poligonos](matematica/algebra-linear/poligonos.md)
-
