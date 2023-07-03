@@ -4,19 +4,26 @@ Esse [blog](https://gilberto-tec.gitbook.io/blog/) e meramente um local aonde po
 
 Mas embora esteja só no incio, eu compartinho com vocês esse pensamento:
 
-![&quot;O que n&#xE3;o posso criar, n&#xE3;o entendo&quot;](.gitbook/assets/image%20%281%29.png)
+!["O que não posso criar, não entendo"](<.gitbook/assets/image (1).png>)
 
 
 
-{% page-ref page="algoritmo/knn-a.i.md" %}
+{% content-ref url="algoritmo/knn-a.i.md" %}
+[knn-a.i.md](algoritmo/knn-a.i.md)
+{% endcontent-ref %}
 
-{% page-ref page="linux/script.md" %}
+{% content-ref url="linux/script.md" %}
+[script.md](linux/script.md)
+{% endcontent-ref %}
 
-{% page-ref page="linux/compilando\_para\_instalar/" %}
+{% content-ref url="linux/compilando_para_instalar/" %}
+[compilando\_para\_instalar](linux/compilando\_para\_instalar/)
+{% endcontent-ref %}
 
-{% page-ref page="linux/compilando\_para\_instalar/repository/dbeaver.md" %}
+{% content-ref url="linux/compilando_para_instalar/repository/dbeaver.md" %}
+[dbeaver.md](linux/compilando\_para\_instalar/repository/dbeaver.md)
+{% endcontent-ref %}
 
 {% hint style="success" %}
 ## [Assine o Abaixo assinado para Julian Assange livre, Parem com a Extradição dos USA](https://www.change.org/p/free-julian-assange-before-it-s-too-late-stop-usa-extradition)
 {% endhint %}
-

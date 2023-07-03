@@ -4,39 +4,43 @@ description: Esse algoritmo e usado no aprendizado de maquina supervisionado.
 
 # Algoritmo KNN
 
-  Algoritmo KNN é utilizado na aprendizagem supervisionada de maquina, basicamente nesse artigo vamos implementar esse algoritmo em um cenário de um restaurante internacional.
+&#x20; Algoritmo KNN é utilizado na aprendizagem supervisionada de maquina, basicamente nesse artigo vamos implementar esse algoritmo em um cenário de um restaurante internacional.
 
 ## Montar o cenário
 
-![](../.gitbook/assets/imagemdosdados.png)
+![](../.gitbook/assets/ImagemDosDados.png)
 
-  Estamos em um ilustre restaurante Italiano dentro do Aeroporto Internacional John F. Kennedy na cidade de New York, nosso cliente possui um clientela internacional bastante variada sendo composta por Americanos, Brasileiros, Espanhóis e Franceses. O nosso cliente deseja abrir uma filial, mas não sabe em qual nação seu Cardápio Italiano sera mais apreciado. Seu trabalho será identificar qual pais retem o maior numero de clientes.
+&#x20; Estamos em um ilustre restaurante Italiano dentro do Aeroporto Internacional John F. Kennedy na cidade de New York, nosso cliente possui um clientela internacional bastante variada sendo composta por Americanos, Brasileiros, Espanhóis e Franceses. O nosso cliente deseja abrir uma filial, mas não sabe em qual nação seu Cardápio Italiano sera mais apreciado. Seu trabalho será identificar qual pais retem o maior numero de clientes.
 
-  Para auxilia lo nosso cliente te enviou as comandas de 5 dias de trabalho com a respectiva quantidade em gramas de Carne vermelha , Carne Branca , Massas, Frutas e Vegetais consumidos por cliente.
+&#x20; Para auxilia lo nosso cliente te enviou as comandas de 5 dias de trabalho com a respectiva quantidade em gramas de Carne vermelha , Carne Branca , Massas, Frutas e Vegetais consumidos por cliente.
 
 {% hint style="warning" %}
 Atenção nesse cenário existem varias variáveis que precisamos considerar, mas não vamos abordar essas questões, para facilitar a implementação do algoritmo. Além é claro que nosso cliente poderia simplesmente perguntar ao cliente qual sua nacionalidade.
 {% endhint %}
 
-  Como fonte dos hábitos alimentares dos Americanos, Brasileiros , Espanhóis e Franceses você utilizou um estudo da _International Scientific Institute of Biology and Agriculture_.
+&#x20; Como fonte dos hábitos alimentares dos Americanos, Brasileiros , Espanhóis e Franceses você utilizou um estudo da _International Scientific Institute of Biology and Agriculture_.
 
 ## Comece bonitão! Go Horse!
 
-  Tendo agora um arquivo com a media de consumo de cada nacionalidade em gramas e a quantidade consumida por cliente, construa um programa que leia o arquivo com as medias de cada nacionalidade e as comandas e faça o cruzamento dos dados devolvendo a nacionalidade com mais clientes para ajudar nosso patrão a definir a filial.
+&#x20; Tendo agora um arquivo com a media de consumo de cada nacionalidade em gramas e a quantidade consumida por cliente, construa um programa que leia o arquivo com as medias de cada nacionalidade e as comandas e faça o cruzamento dos dados devolvendo a nacionalidade com mais clientes para ajudar nosso patrão a definir a filial.
 
-{% file src="../.gitbook/assets/mediapornasci.knn.algoritmo.txt" caption="Scientific Institute of Biology and Agriculture." %}
+{% file src="../.gitbook/assets/mediaPorNasci.knn.algoritmo.txt" %}
+Scientific Institute of Biology and Agriculture.
+{% endfile %}
 
-{% file src="../.gitbook/assets/comandas.knn.algoritmo.txt" caption="Comandas enviadas pelo cliente" %}
+{% file src="../.gitbook/assets/comandas.knn.algoritmo.txt" %}
+Comandas enviadas pelo cliente
+{% endfile %}
 
-  Esta na hora de produzir o código que usara a media do estudo e as comandas para através da distancia euclidiana definir a nacionalidade de cada cliente.
+&#x20; Esta na hora de produzir o código que usara a media do estudo e as comandas para através da distancia euclidiana definir a nacionalidade de cada cliente.
 
-  Para ser mais abrangente em termos de linguagem eu farei o Algoritmo em Javascript, Python e JAVA, para assegurar que a maioria compreenda em sua linguagem mais familiar.
+&#x20; Para ser mais abrangente em termos de linguagem eu farei o Algoritmo em Javascript, Python e JAVA, para assegurar que a maioria compreenda em sua linguagem mais familiar.
 
-  Antes de procedermos saiba que as descrições podem estar um tanto complexas para falar a verdade, então não exite em pegar uma café e/ou ler uma 2° vez.
+&#x20; Antes de procedermos saiba que as descrições podem estar um tanto complexas para falar a verdade, então não exite em pegar uma café e/ou ler uma 2° vez.
 
 ### Função da Distancia Euclidiana
 
-  Para pensar em distancia nos termos da distancia euclidiana, pense que a distancia de uma entidade\(Cliente\) para outra nada mais é do que quantas diferenças uma entidade\(Cliente\) possui em relação a outra entidade\(Cliente\).
+&#x20; Para pensar em distancia nos termos da distancia euclidiana, pense que a distancia de uma entidade(Cliente) para outra nada mais é do que quantas diferenças uma entidade(Cliente) possui em relação a outra entidade(Cliente).
 
 * Pegar a diferença entre as propriedades das entidades
 
@@ -122,28 +126,28 @@ double getEuclidiana(Cliente cliente0 , Cliente cliente1){
 {% endtab %}
 {% endtabs %}
 
-  Primeiro vamos pegar o cliente A que é Americano e consumiu 10.00 g de carne vermelha e vamos pegar a diferença com o cliente B que consumiu 08.00 g de carne vermelha oque nos da:
+&#x20; Primeiro vamos pegar o cliente A que é Americano e consumiu 10.00 g de carne vermelha e vamos pegar a diferença com o cliente B que consumiu 08.00 g de carne vermelha oque nos da:
 
 | Carne Vermelha A | Carne Vermelha B | Diferença |
-| :---: | :---: | :--- |
-| 10.0 g | 08.0 g | 02.0 g |
+| :--------------: | :--------------: | --------- |
+|      10.0 g      |      08.0 g      | 02.0 g    |
 
 * Elevar ao quadrado a diferença
 
-  Agora com a diferença 2.0 g vamos elevar ao quadrado.
+&#x20; Agora com a diferença 2.0 g vamos elevar ao quadrado.
 
 | Diferença | Quadrado |
-| :---: | :---: |
-| 02.0 g | 04.0 g |
+| :-------: | :------: |
+|   02.0 g  |  04.0 g  |
 
-* Somar as diferenças 
+* Somar as diferenças&#x20;
 
-| Cliente | Carne vermelha | Carne Branca | Massas | Frutas | Vegetais |
-| :---: | :---: | :---: | :---: | :---: | :---: |
-| A | 10.00 g | 10.00 g | 07.24 | 03.50 | 02.10 |
-| B | 08.00 g | 11.00 g | 06.24 | 03.64 | 03.00 |
-| A  **-**  B | 02.00 g | -01.00 g | 01.00 | 00.14 | -00.90 |
-| x**²** | 4.0 | 1.0 | 1.0 | 0.019 | 0.81 |
+|   Cliente  | Carne vermelha | Carne Branca | Massas | Frutas | Vegetais |
+| :--------: | :------------: | :----------: | :----: | :----: | :------: |
+|      A     |     10.00 g    |    10.00 g   |  07.24 |  03.50 |   02.10  |
+|      B     |     08.00 g    |    11.00 g   |  06.24 |  03.64 |   03.00  |
+| A **-**  B |     02.00 g    |   -01.00 g   |  01.00 |  00.14 |  -00.90  |
+|   x**²**   |       4.0      |      1.0     |   1.0  |  0.019 |   0.81   |
 
 * Fazer a raiz quadrada
 
@@ -153,19 +157,19 @@ Para os Curiosos e entusiasmados por programação, a função de raiz na maiori
 `sqrt( x, 2 ) == x ** ( 1 / 2 )` ou `sqrt( x, 3 ) == x ** ( 1 / 3 )`
 {% endhint %}
 
-| Carne vermelha | Carne Branca | Massas | Frutas | Vegetais | Soma | Raiz |
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-| 4.0 | 1.0 | 1.0 | 0.019 | 0.81 | 6,829 | 46.63 |
+| Carne vermelha | Carne Branca | Massas | Frutas | Vegetais |  Soma |  Raiz |
+| :------------: | :----------: | :----: | :----: | :------: | :---: | :---: |
+|       4.0      |      1.0     |   1.0  |  0.019 |   0.81   | 6,829 | 46.63 |
 
 ### Função da Classificação
 
-  Dentro dessa função vamos comparar o cliente que precisa ser identificado com as pessoas que já sabemos a nacionalidade pelo estudo que consultamos.
+&#x20; Dentro dessa função vamos comparar o cliente que precisa ser identificado com as pessoas que já sabemos a nacionalidade pelo estudo que consultamos.
 
- Depois criar uma vetor que indexe as relações de distancia entre as entidades cliente não identificadas\(Comanda\) para os clientes do estudo.
+&#x20;Depois criar uma vetor que indexe as relações de distancia entre as entidades cliente não identificadas(Comanda) para os clientes do estudo.
 
-####   Pegando os dados
+#### &#x20; Pegando os dados
 
-  Começamos lendo os dados nos dois arquivo e adicionando nas nossas listas. para isso vamos criar uma função para ler e montar os dados.
+&#x20; Começamos lendo os dados nos dois arquivo e adicionando nas nossas listas. para isso vamos criar uma função para ler e montar os dados.
 
 {% tabs %}
 {% tab title="JavaScript" %}
@@ -263,14 +267,13 @@ public List<Cliente> le_arquivo(String nome){
 
 {% tab title="C++" %}
 ```
-
 ```
 {% endtab %}
 {% endtabs %}
 
-  Agora que já podemos ler vamos pegar os dados do estudo que esta no arquivo de nome`mediaPorNasci.knn.algoritmo.txt` e os dados das comandas não identificadas no arquivo `comandas.knn.algoritmo.txt` , e começar a comparação.
+&#x20; Agora que já podemos ler vamos pegar os dados do estudo que esta no arquivo de nome`mediaPorNasci.knn.algoritmo.txt` e os dados das comandas não identificadas no arquivo `comandas.knn.algoritmo.txt` , e começar a comparação.
 
-  Vamos criar uma estrutura  de repetição que para pegar cada um dos clientes não identificas e  outro **loop** interno que se em carregara de comparar os dados do cliente não identificado com os dados do estudo.
+&#x20; Vamos criar uma estrutura  de repetição que para pegar cada um dos clientes não identificas e  outro **loop** interno que se em carregara de comparar os dados do cliente não identificado com os dados do estudo.
 
 {% tabs %}
 {% tab title="JavaScript" %}
@@ -346,42 +349,46 @@ for(Cliente clienteNaoIdentificado : listNaoClassificados){
 {% endtab %}
 {% endtabs %}
 
-  Para nos ajuda a entender vamos resumir nossas variáveis ate agora:
+&#x20; Para nos ajuda a entender vamos resumir nossas variáveis ate agora:
 
-| **VARIÁVEL** | **DESCRIÇÃO** |
-| :--- | :--- |
-| **`listClassificados`** | Uma lista com as pessoas do estudo e suas medias de consumo de  Carne vermelha , Carne Branca , Massas, Frutas e Vegetais por refeição. |
-| **`listNaoClassificados`** | Uma lista com os clientes das comandas e seu  consumo de  Carne vermelha , Carne Branca , Massas, Frutas e Vegetais. |
-| **`clienteNaoIdentificado`** |  Cliente da comanda que ainda não foi definido de qual nacionalidade ele pertence! |
-| **`pessoaIdentificada`** |   Pessoa do Estudo com a media de consumo por refeição e sua nacionalidade. |
+| **VARIÁVEL**                 | **DESCRIÇÃO**                                                                                                                           |
+| ---------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
+| **`listClassificados`**      | Uma lista com as pessoas do estudo e suas medias de consumo de  Carne vermelha , Carne Branca , Massas, Frutas e Vegetais por refeição. |
+| **`listNaoClassificados`**   | Uma lista com os clientes das comandas e seu  consumo de  Carne vermelha , Carne Branca , Massas, Frutas e Vegetais.                    |
+| **`clienteNaoIdentificado`** |  Cliente da comanda que ainda não foi definido de qual nacionalidade ele pertence!                                                      |
+| **`pessoaIdentificada`**     |   Pessoa do Estudo com a media de consumo por refeição e sua nacionalidade.                                                             |
 
-  Bem agora que já pegamos cada `clienteNaoIdentificado`  e cada  `pessoaIdentificada` do estudo, vamos precisar comparar cada um dos `clienteNaoIdentificado` com todas as   `pessoaIdentificada` e guardar a distancia como mostrada nas imagens abaixo.
+&#x20; Bem agora que já pegamos cada `clienteNaoIdentificado`  e cada  `pessoaIdentificada` do estudo, vamos precisar comparar cada um dos `clienteNaoIdentificado` com todas as   `pessoaIdentificada` e guardar a distancia como mostrada nas imagens abaixo.
 
-![Imagem das compara&#xE7;&#xF5;es](../.gitbook/assets/imagemcomparacoes.png)
+![Imagem das comparações](../.gitbook/assets/ImagemComparacoes.png)
 
-  Caso nosso `clienteNaoIdentificado` seja:
+&#x20; Caso nosso `clienteNaoIdentificado` seja:
 
-* Americano 
+* Americano&#x20;
 
-![](../.gitbook/assets/imagemcomparacoesamericano.png)
+<div align="center">
+
+<img src="../.gitbook/assets/ImagemComparacoesAmericano.png" alt="">
+
+</div>
 
 * Espanhol
 
-![](../.gitbook/assets/imagemcomparacoesespanhol.png)
+![](../.gitbook/assets/ImagemComparacoesEspanhol.png)
 
 * Brasileiro
 
-![](../.gitbook/assets/imagemcomparacoesbrasileiro.png)
+![](../.gitbook/assets/ImagemComparacoesBrasileiro.png)
 
 * Frances
 
-![](../.gitbook/assets/imagemcomparacoesfrances.png)
+![](../.gitbook/assets/ImagemComparacoesFrances.png)
 
-  
+&#x20;&#x20;
 
-  Através da comparação com as pessoas já identificadas podemos extrapolar de qual nacionalidade  e o nosso cliente.
+&#x20; Através da comparação com as pessoas já identificadas podemos extrapolar de qual nacionalidade  e o nosso cliente.
 
-  Então vamos implementar criando uma lista chamada `listIndexadaPelaDistancia` que conterá a distancia que cada pessoas já identificada estão do cliente ainda não identificado. E depois vamos ordenar a lista para que tenhamos o mais próximo na 1° posição, o segundo na 2° posição e assim por diante deixando o  mais distante na ultima posição.
+&#x20; Então vamos implementar criando uma lista chamada `listIndexadaPelaDistancia` que conterá a distancia que cada pessoas já identificada estão do cliente ainda não identificado. E depois vamos ordenar a lista para que tenhamos o mais próximo na 1° posição, o segundo na 2° posição e assim por diante deixando o  mais distante na ultima posição.
 
 {% tabs %}
 {% tab title="JavaScript" %}
@@ -475,7 +482,7 @@ Set<Double> set = listIndexadaPelaDistancia.keySet();
 {% endtab %}
 {% endtabs %}
 
-  Agora que já temos a relação entre **`clienteNaoIdentificado`** e todas as **`pessoaIdentificada`** , precisamos determinar o quão distante a gente vai considerar para classificação , ao seja, quais das **`pessoaIdentificada`** estão mais próximas para nos ajudar a classificar o **`clienteNaoIdentificado`** , eu decidi escolher os 7 primeiros da lista ordenada.
+&#x20; Agora que já temos a relação entre **`clienteNaoIdentificado`** e todas as **`pessoaIdentificada`** , precisamos determinar o quão distante a gente vai considerar para classificação , ao seja, quais das **`pessoaIdentificada`** estão mais próximas para nos ajudar a classificar o **`clienteNaoIdentificado`** , eu decidi escolher os 7 primeiros da lista ordenada.
 
 {% tabs %}
 {% tab title="JavaScript" %}
@@ -508,7 +515,7 @@ for(Double key : listIndexadaPelaDistancia.keySet()) {
 {% endtab %}
 {% endtabs %}
 
- Agora só falta contar a nacionalidade predominante nesse conjunto de 7 pessoas próximas e teremos nosso classificador.
+&#x20;Agora só falta contar a nacionalidade predominante nesse conjunto de 7 pessoas próximas e teremos nosso classificador.
 
 {% tabs %}
 {% tab title="JavaScript" %}
@@ -600,7 +607,7 @@ for(Double key : listIndexadaPelaDistancia.keySet()) {
 {% endtab %}
 {% endtabs %}
 
-  Agora vamos verificar qual é a predominante verificando qual das variáveis acumuladoras e maior que as outras.
+&#x20; Agora vamos verificar qual é a predominante verificando qual das variáveis acumuladoras e maior que as outras.
 
 {% tabs %}
 {% tab title="JavaScript" %}
@@ -685,7 +692,7 @@ out.println("Categoria Verdadeira : " + clienteNaoIdentificado
 {% endtab %}
 {% endtabs %}
 
-  Agora só falta mostrar quantos clientes cada nacionalidade possui:
+&#x20; Agora só falta mostrar quantos clientes cada nacionalidade possui:
 
 {% tabs %}
 {% tab title="JavaScript" %}
@@ -775,11 +782,16 @@ out.println(" Brasileiros  "+ qtdBrasileiro);
 {% endtab %}
 {% endtabs %}
 
-  Vou deixar o código para download:
+&#x20; Vou deixar o código para download:
 
-{% file src="../.gitbook/assets/pythonknn.zip" caption="Algoritmo KNN em Python" %}
+{% file src="../.gitbook/assets/Pythonknn.zip" %}
+Algoritmo KNN em Python
+{% endfile %}
 
-{% file src="../.gitbook/assets/javascriptknn.zip" caption="Algoritmo Knn em JavaScript" %}
+{% file src="../.gitbook/assets/Javascriptknn.zip" %}
+Algoritmo Knn em JavaScript
+{% endfile %}
 
-{% file src="../.gitbook/assets/javaknn.zip" caption="Algoritmo Knn em Java" %}
-
+{% file src="../.gitbook/assets/Javaknn.zip" %}
+Algoritmo Knn em Java
+{% endfile %}
