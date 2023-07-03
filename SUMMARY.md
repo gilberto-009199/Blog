@@ -21,6 +21,7 @@
   * [Programas Compilados](linux/compilando\_para\_instalar/repository/README.md)
     * [DBeaver](linux/compilando\_para\_instalar/repository/dbeaver.md)
     * [VPCS](linux/compilando\_para\_instalar/repository/vpcs.md)
+    * [OpenCV](linux/compilando\_para\_instalar/repository/opencv.md)
 
 ## Java
 
