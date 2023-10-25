@@ -8,17 +8,29 @@ DBeaver é um programa feito em java que utiliza a JPA e jdbc para conectar em d
 
 Para começar precisaremos do código fonte, para isso vamos clonar o repositório:
 
-```text
+```
 $ git clone https://github.com/dbeaver/dbeaver.git dbeaver
 $ cd dbeaver
-$ mvn package   # ou mvn install
 ```
+
+Na pasta você deve ver algo como isso na pasta:
+
+
+
+<figure><img src="../../../.gitbook/assets/dbeaver2.png" alt=""><figcaption></figcaption></figure>
+
+Para gerar os executaveis rode `mvn package`:
+
+```bash
+$ mvn package
+```
+
+<figure><img src="../../../.gitbook/assets/dbeaver1.png" alt=""><figcaption><p>Download sources and build</p></figcaption></figure>
 
 Depois disso as releases estarão em `product/standalone/target/products/` , dentro da pasta terá um compila do para Linux, MacOS e Windows.
 
-Mas como o executável para cada plataforma não é um jar? Ao invés de um arquivo binário executável para cada plataforma, na realidade o DBeaver se utilizou do `tycho` usado pelo eclipse se você quiser saber mais acesso esse [link](https://git.eclipse.org/c/tycho/org.eclipse.tycho-demo.git/tree/itp01/tycho.demo.itp01/src/tycho/demo/itp/Application.java).
+Mas como o executável para cada plataforma não é um jar? Ao invés de um arquivo binário executável para cada plataforma, na realidade o DBeaver se utilizou do `tycho` usado pelo eclipse se você quiser saber mais acesse esse [link](https://projects.eclipse.org/projects/technology.tycho).
 
 {% hint style="info" %}
 Em desenvolvimento
 {% endhint %}
-
