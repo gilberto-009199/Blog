@@ -24,7 +24,7 @@ O vpcs do GNS3, já possui um script de build, o `./src/mk.sh`, mas pode ser que
 
 O script já reconhece a arquitetura então execute:
 
-```
+```sh
 $ ./src/mk.sh 
 ```
 
@@ -32,7 +32,7 @@ $ ./src/mk.sh
 
 Para executa o simulador de VPCS, execute:
 
-```
+```shell
 $ ./src/vpcs
 ```
 
