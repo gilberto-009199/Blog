@@ -4,7 +4,7 @@
 
 ## Algoritmo
 
-* [Algoritmo KNN](algoritmo/knn-a.i.md)
+* [KNN(Aprendizado de máquina)](algoritmo/knn-a.i.md)
 * [UUIDv4(Pseudoaleatoriedade)](algoritmo/pseudo-aleatoriedade.md)
 
 ## Linux
