@@ -5,7 +5,7 @@
 ## Algoritmo
 
 * [Algoritmo KNN](algoritmo/knn-a.i.md)
-* [Pseudo Aleatoriedade](algoritmo/pseudo-aleatoriedade.md)
+* [UUIDv4(Pseudoaleatoriedade)](algoritmo/pseudo-aleatoriedade.md)
 
 ## Linux
 
@@ -16,12 +16,12 @@
 * [Script](linux/script.md)
 * [Avançado](linux/avancado/README.md)
   * [Desempenho e depuração (Strace, Ftrace e etc)](linux/avancado/desempenho-e-depuracao-strace-ftrace-e-etc.md)
-* [Compilar Programas](linux/compilando\_para\_instalar/README.md)
-  * [Install Linux Program](linux/compilando\_para\_instalar/basic.md)
-  * [Programas Compilados](linux/compilando\_para\_instalar/repository/README.md)
-    * [DBeaver](linux/compilando\_para\_instalar/repository/dbeaver.md)
-    * [VPCS](linux/compilando\_para\_instalar/repository/vpcs.md)
-    * [OpenCV](linux/compilando\_para\_instalar/repository/opencv.md)
+* [Compilar Programas](linux/compilando_para_instalar/README.md)
+  * [Install Linux Program](linux/compilando_para_instalar/basic.md)
+  * [Programas Compilados](linux/compilando_para_instalar/repository/README.md)
+    * [DBeaver](linux/compilando_para_instalar/repository/dbeaver.md)
+    * [VPCS](linux/compilando_para_instalar/repository/vpcs.md)
+    * [OpenCV](linux/compilando_para_instalar/repository/opencv.md)
 
 ## Java
 
